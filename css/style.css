@@ -1,0 +1,30 @@
+* {
+    font-family: 'Sacramento', cursive;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Sacramento', cursive;
+    color: red;
+    font-size: 100px;
+    text-align: center;
+}
+
+img {
+    width: 50%;
+}
+
+main {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer {
+    width: 100;
+    height: 50px;
+    padding: 20px;
+    text-align: center;
+    background-color: red;
+    color: white;
+}
