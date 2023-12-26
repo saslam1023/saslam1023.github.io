@@ -89,13 +89,12 @@ header {
     position: fixed;
     bottom: 0;
     z-index: 10;
-
-
-
 }
 
-
-
+.boxRow.expanded {
+    width: 100vw;
+    height: 100vh;
+}
 
 .box {
     color: white;
@@ -134,10 +133,7 @@ header {
     align-items: flex-end;
 }
 
-.boxRow.expanded {
-    width: 100vw;
-    height: 100vh;
-}
+
 
 /* Images */
 
