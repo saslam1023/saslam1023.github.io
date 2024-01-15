@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="css/dash-styleview.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/process-data.js"></script>
     <script>
 
         /*function changeImage(element)
@@ -117,13 +116,13 @@
                         </div>
                         <br />
                         <div class="label"><label for="imagefile">Image</label>
-                            <img width="50" height="60" id="imageoutput" src="#" alt="Image placeholder" />
+                            <img width="50" height="60" id="imagefile" src="#" alt="Image placeholder" />
                             <input placeholder="e.g /placeholder.jpg" type="text" name="imagefile" tabindex="5"
                                 id="imagefile" /><br />
                         </div>
                         <br />
                         <div class="label"><label for="link">Link</label>
-                            <input type="text" placeholder="Link" name="link" tabindex="8" /><br />
+                            <input type="text" placeholder="Link" name="link" id="link" tabindex="8" /><br />
                             <br />
                         </div>
                     </div>
@@ -131,12 +130,13 @@
                     <hr>
                     <div class="flex">
                         <div class="label required"><label for="content">Content</label>
-                            <textarea type="text" placeholder="Enter content text" name="content" tabindex="6"
-                                required></textarea><br />
+                            <textarea type="text" placeholder="Enter content text" name="content" id="content"
+                                tabindex="6" required></textarea><br />
                         </div>
                         <br />
                         <div class="label"><label for="block">Block</label>
-                            <textarea type="text" placeholder="Block text" name="block" tabindex="7"></textarea><br />
+                            <textarea type="text" placeholder="Block text" name="block" id="block"
+                                tabindex="7"></textarea><br />
                         </div>
                         <br />
 
@@ -190,17 +190,17 @@
                     <hr>
                     <div class="flex">
                         <div class="label required"><label for="contact">Author</label>
-                            <input maxlength="200" type="text" placeholder="Author" name="contact" tabindex="12"
-                                required /><br />
+                            <input maxlength="200" type="text" placeholder="Author" name="contact" id="contact"
+                                tabindex="12" required /><br />
                         </div>
 
                         <div class="label"><label for="phone">Phone number</label>
-                            <input maxlength="200" type="text" placeholder="Phone number " name="phone"
+                            <input maxlength="200" type="text" placeholder="Phone number" id="phone" name="phone"
                                 tabindex="13" /><br />
                         </div>
 
                         <div class="label"><label for="email">Email address</label>
-                            <input maxlength="200" type="text" placeholder="Email address " name="email"
+                            <input maxlength="200" type="text" placeholder="Email address " id="email" name="email"
                                 tabindex="14" /><br />
                         </div>
                     </div>
@@ -216,43 +216,9 @@
                 </form><br /> <br />
             </section>
 
-            <!-- .form end -->
-            <table class="table" id="table">
-                <caption class="tr dark">
-                    Site content edit
-                </caption>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>H1</th>
-                        <th>H2</th>
-                        <th>H3</th>
-                        <th>Icon</th>
-                        <th>Heading</th>
-                        <th>Subheading</th>
-                        <th>Date</th>
-                        <th>Image</th>
-                        <th>Content</th>
-                        <th>Block</th>
-                        <th>Link</th>
-                        <th>Colour</th>
-                        <th>Status</th>
-                        <th>Contact</th>
-                        <th>Email</th>
-                        <th>Phone</th>
-                        <th></th>
 
-
-            </table>
         </div>
     </main>
-
-    <!--- <div id="article-wrapper" class="article-wrap group print grid"></div>-->
-
-    <!-- footer -->
-    <!-- <script src="js/search.js"></script>
-    <script src="js/view.js"></script>-->
-
 
 </body>
 

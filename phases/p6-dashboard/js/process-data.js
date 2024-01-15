@@ -42,7 +42,7 @@ $(document).ready(function () {
                 if (status == 'live') {
                     //  tbr = "<tr class='tr'>";
 
-                    tblRow = "<tr class='tr'><td class='td'>" + f.id + "</td><td class='td'>" + f.h1 + "</td><td class='td'> " + f.h2 + "</td ><td class='td'>" + f.h3 + "</td><td class='td'>" + f.icon + "</td><td class='td'>" + f.item.heading + "</td><td class='td'>" + f.item.subheading + "</td><td class='td'>" + f.item.date + "</td><td class='td'><img src='" + f.item.image + "'></td><td class='td'>" + f.item.content + "</td><td class='td'>" + f.item.block + "</td><td class='td'>" + f.item.link + "</td><td class='td'>" + f.item.colour + "</td><td class='td'> " + f.item.status + "</td><td class='td'>" + f.contact.name + "</td><td class='td'>" + f.contact.email + "</td><td class='td'>" + f.contact.phone + "</td></tr>";
+                    tblRow = "<tr class='tr'><td class='td'>" + f.id + "</td><td class='td'>" + f.h1 + "</td><td class='td'> " + f.h2 + "</td ><td class='td'>" + f.h3 + "</td><td class='td'>" + f.icon + "</td><td class='td'>" + f.item.heading + "</td><td class='td'>" + f.item.subheading + "</td><td class='td'>" + f.item.date + "</td><td class='td'><img src='" + f.item.image + "' width='50'></td><td class='td'>" + f.item.content + "</td><td class='td'>" + f.item.block + "</td><td class='td'>" + f.item.link + "</td><td class='td'>" + f.item.colour + "</td><td class='td'> " + f.item.status + "</td><td class='td'>" + f.contact.name + "</td><td class='td'>" + f.contact.email + "</td><td class='td'>" + f.contact.phone + "</td></tr>";
 
                     //  tbrdark = "<tr class='tr dark'>";
 

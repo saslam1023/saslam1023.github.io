@@ -9,34 +9,10 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/styleview.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <title>Welcome to: saslam1023.github.io</title>
-    <style>
-        #box {
-            position: fixed;
-
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            cursor: pointer;
-            transition: all 0.5s;
-        }
-
-        .box.zoomed {
-            width: 100vw;
-            height: 100vh;
-            top: 0;
-            left: 0;
-            transform: none;
-            z-index: 2;
-        }
-
-        body.zoomed {
-            overflow: hidden;
-        }
-    </style>
 </head>
 
 <body>
@@ -79,23 +55,8 @@
 
 
             <!-- row 2-->
-            <div class="box green" id="box" onclick="toggleZoom()">9 zoom toggle Lorem ipsum dolor sit
-                amet,
-                consectetur
-                adipisicing elit. Tempore explicabo adipisci nobis iste doloremque eius commodi error voluptatum,
-                tenetur nisi sunt quae, est ipsa magni ad eos officiis eligendi reiciendis veritatis vel in soluta?
-                Quis
-                earum ipsum tempora, exercitationem quidem culpa commodi esse voluptatum nesciunt a, natus,
-                molestiae
-                sit repellendus rem deleniti molestias architecto. Quam ratione commodi excepturi consequuntur
-                repellendus hic voluptatem mollitia porro vel saepe, reprehenderit vitae facere expedita obcaecati,
-                quis
-                voluptates officiis ducimus repudiandae vero eveniet velit repellat voluptatibus? Perferendis
-                dolorem
-                sint atque velit unde in praesentium quas accusamus quibusdam. Explicabo, aut odio. Ipsam iure quas
-                possimus amet.
-            </div>
-            <div class=" box pink">
+            <div class="box green">9</div>
+            <div class="box pink">
                 <span class="material-icons-round open blackt md-32">explore</span><br>
                 <div class="tooltip">?
                     <span class="tooltiptext">Tooltip text. What does this mean?</span>
@@ -220,14 +181,6 @@
 
     <!-- footer -->
     <script src="js/search.js"></script>
-    <script>
-        function toggleZoom() {
-            var body = document.body;
-            var zoomBox = document.getElementById('box');
-            zoomBox.classList.toggle('zoomed');
-            body.classList.toggle('zoomed');
-        }
-    </script>
 </body>
 
 </html>

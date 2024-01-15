@@ -14,23 +14,7 @@
     --gradientR: radial-gradient(circle, hsla(0, 0%, 22%, 1) 0%, hsla(0, 0%, 0%, 1) 100%);
     --gradientL: linear-gradient(360deg, hsla(0, 0%, 22%, 1) 0%, hsla(95, 83%, 47%, 1) 10%, hsla(0, 0%, 0%, 1) 20%, hsla(192, 83%, 47%, 1) 30%, hsla(0, 0%, 0%, 1) 40%, hsla(0, 0%, 100%, 1) 50%, hsla(0, 0%, 0%, 1) 60%, hsla(314, 83%, 47%, 1) 70%, hsla(0, 0%, 0%, 1) 80%, hsla(40, 91%, 50%, 1) 90%, hsla(0, 0%, 0%, 1) 100%);
     --gradientC: conic-gradient(from 135deg, black, gray);
-    /* --illuminate: radial-gradient(circle, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 0.8) 100%);
-    /* illuminate inset option white
-   --boxshadow: inset 0 0 10px rgba(255, 255, 255, 0.4),
-        inset 0 0 20px rgba(255, 255, 255, 0.3),
-        inset 0 0 30px rgba(255, 255, 255, 0.2),
-        inset 0 0 40px rgba(255, 255, 255, 0.1);
-*/
-    /* Add a dark translucent radial gradient for the opposite effect */
-    /* --illuminate: conic-gradient(from -45deg, rgba(128, 128, 128, 0), rgba(0, 0, 0, 0.2), rgba(128, 128, 128, 0));*/
-    --illuminate: radial-gradient(circle, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.07) 100%);
 
-    /* Add a translucent inset box shadow for the opposite effect */
-    /*    --box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4),
-        inset 0 0 20px rgba(0, 0, 0, 0.3),
-        inset 0 0 30px rgba(0, 0, 0, 0.2),
-        inset 0 0 40px rgba(0, 0, 0, 0.1);*/
-    --bowshadow: none;
 
 }
 
@@ -39,7 +23,6 @@
     font-family: 'Silkscreen', sans-serif;
     font-size: 18px;
     word-wrap: break-all;
-    line-height: auto;
 }
 
 
@@ -56,15 +39,10 @@ a {
 h1 {
     font-size: 20px;
     word-wrap: break-all;
-
 }
 
-.box h1,
-.box h2,
-.box h3,
-.box p,
-.box i {
-    padding: 0px;
+.box h1 {
+    padding: 10px;
 }
 
 h2 {
@@ -136,19 +114,13 @@ header {
 /* Icons */
 
 .open {
-    position: relative;
+    position: absolute;
     color: #000;
-    width: max-content;
+    width: fit-content;
     height: auto;
-    right: 0px;
-    top: 0px;
+    right: 20px;
+    top: 20px;
     padding: 5px;
-}
-
-.right {
-    float: right;
-    text-align: right;
-    vertical-align: top;
 }
 
 .md-64 {
@@ -317,13 +289,11 @@ input {
     border: 0px;
     padding: 0;
     text-align: left;
-    top: 0;
-    vertical-align: top;
 }
 
 #search-bar {
     padding: 2px;
-    width: 90%;
+    width: 100%;
     height: 32px;
 }
 
@@ -331,7 +301,8 @@ input {
     list-style: none;
     padding: 0;
     margin: 0;
-    position: relative;
+    position: absolute;
+    top: 100%;
     left: 0;
     width: 100%;
     border: 0px solid #ddd;
@@ -361,7 +332,6 @@ input {
     border: 0px solid red;
     display: inline;
     width: 20px;
-    float: right;
 }
 
 .highlight {
@@ -484,7 +454,7 @@ ul[class] li>* {
 /* [3] Make fullwidth card span all grid columns. */
 .fullwidth {
     grid-column: 1 / -1;
-
+    height: 100vh;
     width: 100%;
     overflow: hidden;
     transition: height 1s ease-in-out, position 1s ease, opacity 2s ease;
@@ -502,6 +472,7 @@ ul[class] li>* {
 }
 
 .fullwidth:not(.is-hidden) {
+    height: 100vh;
     overflow: auto;
     top: 0;
     left: 0;
@@ -510,8 +481,8 @@ ul[class] li>* {
 
 .fullwidth,
 .is-selected {
-    background-color: inherit;
-    background-image: var(--bowshadow);
+    background-color: gainsboro;
+    /* background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);/*/
     color: var(--black);
 }
 
@@ -523,12 +494,10 @@ ul[class] li>* {
 
 .expand {
     grid-column: 1 / -1;
-    padding-top: 20px;
-    height: auto;
+    height: 10px;
     width: 100%;
+    z-index: 10;
 }
-
-
 
 
 .li:not(.expand) {
@@ -536,13 +505,8 @@ ul[class] li>* {
 }
 
 .expand h1 {
+    padding-top: 100px;
     font-size: 32px;
-
-}
-
-.expand h2 {
-    font-size: 32px;
-
 }
 
 hr {
@@ -551,19 +515,16 @@ hr {
 
 }
 
+.fullwidth {
+    width: 100vw;
 
-.contentLayout {
-    width: 80%;
-    border: 1px solid black;
-    display: flex;
-    flex-wrap: wrap;
-    columns: 2;
-    column-gap: 5%;
 }
 
-li>div.contentLayout {
-    margin: 50px auto;
-    vertical-align: middle;
+.contentLayout {
+    padding: 100px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(4 / 1fr);
 }
 
 .contentLayout p,
@@ -572,18 +533,13 @@ li>div.contentLayout {
     font-family: 'DM Mono', monospace;
     font-size: 16px;
     color: var(--black);
+    line-height: 32px;
 }
 
 .contentLayout p {
-    float: right;
+    grid-column: 1 / 4;
     background-color: #777;
 }
-
-.contentLayout h2 {
-    width: 300px;
-    background-color: #b84d4d;
-}
-
 
 .pad50 {
     padding-bottom: 50px;
@@ -601,26 +557,4 @@ li>div.contentLayout {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     margin: 20px;
-}
-
-.illuminate {
-    background-image: var(--illuminate);
-}
-
-.boxshadow {
-    box-shadow: var(--boxshadow);
-}
-
-
-.clickable {
-    width: 90%;
-    height: auto;
-    border: 1px solid red;
-}
-
-.fullwidth>h1,
-.fullwidth>h2,
-.expand>h1.clickable,
-.expand>h2.clickable {
-    padding-left: 50px;
 }

@@ -501,6 +501,9 @@ hr {
 
 .tr {
     background-color: #14b4dc32;
+    max-height: 40px;
+    overflow: hidden;
+    border: 1px solid black;
 }
 
 .dark {
@@ -508,14 +511,18 @@ hr {
 }
 
 .td {
-    height: auto;
+    overflow: scroll;
+    white-space: nowrap;
+    max-width: 200px;
 }
 
 table,
 tr,
 td {
     font-size: 12px;
+    vertical-align: top;
 }
+
 
 /* Define styles for even and odd rows */
 tr:nth-child(even) {

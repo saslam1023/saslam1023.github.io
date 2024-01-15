@@ -2,8 +2,10 @@
 $date = "{$_POST['date']}";
 $colour = "{$_POST['colour']}";
 $h1 = "{$_POST['h1']}";
-$h2 = "{$_POST['h2']}"; 
-$status = "Draft";
+$h2 = "{$_POST['h2']}";
+$boxlink = "{$_POST['boxlink']}"; 
+$boxcontent = "{$_POST['boxcontent']}"; 
+$status = "{$_POST['status']}";
 $image = "{$_POST['imagefile']}";
 $h3 = "{$_POST['h3']}";
 $contact = "{$_POST['contact']}";
@@ -31,9 +33,19 @@ $counttotal = $iCount+1;
 $name = nl2br($name);
 $dateexpires = date('Y-m-d', strtotime("+365 days"));
 
-$sitemarray = array ("status" =>  $status, "date_listed" => $date,  "date_expired" => $dateexpires, "image" => $image, "description" => $description);
+$itemarray = array (
+"heading" => $h2, 
+"subheading" => $h3, 
+"date" => $date,  
+"image" => $image, 
+"content" => $content, 
+"colour" => $colour, 
+"block" => $block, 
+"link" => $link, 
+"status" =>  $status
+);
 $contactarray = array ("name" => $contact, "email" => $email, "phone" => $phone);
-$mainarray = array("id" => $counttotal, "category" => $category, "condition" => $condition, "price" => $price, "name" => $name, "item" => $itemarray, "contact" => $contactarray);
+$mainarray = array("id" => $counttotal, "category" => $category, "h1" => $h1, "h2" => $h2, "h3" => $h3,  "icon" => $icon, "boxlink" => $boxlink, "boxcontent" => $boxcontent, "item" => $itemarray, "contact" => $contactarray);
 
 $json[$items] []  = $mainarray;
 

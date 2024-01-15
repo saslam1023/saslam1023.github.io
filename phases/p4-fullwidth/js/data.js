@@ -46,7 +46,11 @@ $(document).ready(function () {
                 }
 
                 $(tblRow).delay((i++) * 300).fadeTo(2000, 1).appendTo("#grid");
+
+
             });
+
+
 
 
 
@@ -144,6 +148,8 @@ $(document).ready(function () {
 
 
             });
+
+
         })
     }
 

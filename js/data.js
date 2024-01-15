@@ -29,82 +29,143 @@ $(document).ready(function () {
     }
     //. end date
 
-    // Load Data
-    {
-        var items = [];
+    // Load Grid
+    $(document).ready(function () {
+        // Select the grid container
+        const gridContainer = $('#grid');
+        const targetItemCount = 8;
+
+
+
+        // box shadows
+
+
+
+
+
+        // Load dynamic data from a JSON file using jQuery
         $.getJSON('json/data.json', function (data) {
             $.each(data.items, function (i, f) {
-                var tblRow = ""
+                var tblRow = "";
                 var status = "" + f.item.status + "";
+                var h1 = "" + f.h1 + "";
+                var h2 = "" + f.h2 + "";
 
-                if (status == 'live') {
-                    tblRow = "<li class='box " + f.item.colour + "' ><h1 class='clickable' data-target='#quickview-" + f.id + "'>" + f.h1 + "</h1></li><li class='fullwidth is-hidden contentLayout' id='quickview-" + f.id + "'><h2>" + f.item.heading + "</h2><p>" + f.item.content + "</p><p>Test <a href='#'>inline " + f.item.link + " link</a>.</p></li>"
-                }
+                //    if (status == 'live') {
 
-                else if (status == 'pending') {
-                    tblRow = ""
-                }
+                if (status === 'live') {
+                    if (h1 !== "") {
+                        tblRow = "<li class='box illuminate boxshadow " + f.item.colour + "' ><h1 class='clickable' data-target='#quickview-" + f.id + "'>" + f.h1 + "</h1>" + f.icon + "" + f.boxcontent + "</li><li class='fullwidth is-hidden' id='quickview-" + f.id + "'><div class='contentLayout'><h2 class='md-48 pad50'>" + f.item.heading + "</h2><div>" + f.item.content + "</div><p class='md-32 pad50'>Test <a href='#'>inline " + f.item.link + " link</a>.</p></div></li>";
+                    }
+                    else if (h2 !== "") {
+                        tblRow = "<li class='box illuminate boxshadow " + f.item.colour + "' ><h2 class='clickable' data-target='#quickview-" + f.id + "'>" + f.h2 + "</h2>" + f.icon + "" + f.boxcontent + "</li><li class='fullwidth is-hidden' id='quickview-" + f.id + "'><div class='contentLayout'><h2 class='md-48 pad50'>" + f.item.heading + "</h2><div>" + f.item.content + "</div><p class='md-32 pad50'>Test <a href='#'>inline " + f.item.link + " link</a>.</p></div></li>";
+                    }
 
-                $(tblRow).delay((i++) * 300).fadeTo(2000, 1).appendTo("#grid");
-            });
-
-
-
-
-            // PREV Click event for dynamically created h1 elements
-            $(document).on("click", "h1.clickable", function () {
-                var targetId = $(this).data("target");
-                var isOpen = $(targetId).hasClass("is-hidden");
-                var color = getColorFromClass($(this).parent().attr('class'));
-
-                // Close all open fullwidth containers
-                $(".fullwidth").addClass("is-hidden");
-
-
-                // Toggle the fade-out class on the clicked li element
-                //  $(this).addClass("fade-out");
-
-                // Makes li container full width
-                $("li").removeClass("expand");
-                $(this).parent("li").toggleClass("expand");
-
-
-                // Scroll to a selected item and position it to the top-left corner
-                function scrollToTopLeft(selector) {
-                    var selectedElement = $(selector);
-
-                    // Check if the element exists
-                    if (selectedElement.length > 0) {
-                        // Calculate the offset of the element
-                        var offset = selectedElement.offset();
-
-                        // Scroll to the element's top-left corner
-                        $('html, body').animate({
-                            scrollTop: offset.top,
-                            scrollLeft: offset.left
-                        }, 'slow');
+                    else {
+                        tblRow = "<li class='box illuminate boxshadow " + f.item.colour + "' >" + f.boxcontent + "</li><li class='fullwidth is-hidden' id='quickview-" + f.id + "'><div class='contentLayout'><h2 class='md-48 pad50'>" + f.item.heading + "</h2><div>" + f.item.content + "</div><p class='md-32 pad50'>Test <a href='#'>inline " + f.item.link + " link</a>.</p></div></li>";
                     }
                 }
 
-                // Example usage: Scroll to the top-left corner of the selected element with ID 'exampleElement'
-                scrollToTopLeft(this);
-
-
-
-
-                // REPLACED If the clicked container was not open, open it and set background color
-                if (isOpen) {
-
-                    // Fade in and set background color
-                    $(targetId).css({
-                        backgroundColor: color,
-                        height: $(window).height() + "px"
-                    }).removeClass("is-hidden").toggle().fadeIn(1000); // Adjust the duration as needed
+                else if (status == 'pending') {
+                    tblRow = "";
                 }
 
-
+                // Append the generated HTML to the grid container
+                gridContainer.append(tblRow);
             });
 
+            // Check the current number of li elements after dynamic data is loaded
+            const currentItemCount = gridContainer.children('.box').length;
+
+            // Calculate the remaining items needed to complete the last row
+            const remainingItems = targetItemCount - (currentItemCount % targetItemCount);
+
+            // Add placeholder li elements only for the last row
+            if (remainingItems > 0) {
+                addPlaceholders(remainingItems);
+
+            }
+        });
+        // Placeholder additions
+        let placeholdersLoaded = false;
+
+        // Placeholder additions
+        function addPlaceholders(remainingItems) {
+            // Array of possible colors
+            const colors = ['pink', 'blue', 'green', 'gold', 'white', 'black'];
+
+            // Array to store the colors used in the current row
+            let usedColorsInRow = [];
+
+            for (let i = 0; i < remainingItems; i++) {
+                // Filter out colors that have been used in the current row
+                const availableColors = colors.filter(color => !usedColorsInRow.includes(color));
+
+                // If all unique colors have been used, allow controlled repetition
+                if (availableColors.length === 0) {
+                    // Choose a random color from the entire color array
+                    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                    // Add the chosen color to the usedColorsInRow array
+                    usedColorsInRow.push(randomColor);
+                } else {
+                    // Choose a random color from the available colors
+                    const randomColor = availableColors[Math.floor(Math.random() * availableColors.length)];
+                    // Add the chosen color to the usedColorsInRow array
+                    usedColorsInRow.push(randomColor);
+                }
+
+                // Create placeholder li element with the random color
+                const placeholderLi = document.createElement('li');
+                placeholderLi.classList.add('box', 'illuminate', 'boxshadow', usedColorsInRow[i], 'round-border');
+                placeholderLi.textContent = '';
+                gridContainer.append(placeholderLi);
+            }
+            placeholdersLoaded = true;        // Run the search function only if placeholders have been loaded
+            if (placeholdersLoaded) {
+                initializeSearch();
+            }
+        }
+        // Click event for dynamically created h1 elements
+        $(document).on("click", "h1.clickable", function () {
+            var targetId = $(this).data("target");
+            var isOpen = $(targetId).hasClass("is-hidden");
+            var color = getColorFromClass($(this).closest("li").attr('class'));
+
+            // Close all open fullwidth containers
+            $(".fullwidth").addClass("is-hidden");
+
+            // Makes li container full width
+            $("li").removeClass("expand");
+            $(this).parent("li").toggleClass("expand");
+
+            // Scroll to a selected item and position it to the top-left corner
+            function scrollToTopLeft(selector) {
+                var selectedElement = $(selector);
+
+                // Check if the element exists
+                if (selectedElement.length > 0) {
+                    // Calculate the offset of the element
+                    var offset = selectedElement.offset();
+
+                    // Scroll to the element's top-left corner
+                    $('html, body').animate({
+                        scrollTop: offset.top,
+                        scrollLeft: offset.left
+                    }, 'slow');
+                }
+            }
+
+            // Scroll to the top-left corner of the selected element with ID 'exampleElement'
+            scrollToTopLeft(this);
+
+            // If the clicked container was not open, open it and set background color
+            if (isOpen) {
+                // Fade in and set background color
+                $(targetId).css({
+                    backgroundColor: color,
+                    height: $(window).height() + "px"
+                }).removeClass("is-hidden").toggle().fadeIn(1000); // Adjust the duration as needed
+            }
 
 
             // KEEP Helper function to get the color from class
@@ -113,38 +174,102 @@ $(document).ready(function () {
                 var colorClass = classString.split(' ')[1];
                 return window.getComputedStyle(document.querySelector('.' + colorClass), null).getPropertyValue('background-color');
             }
+        });
 
-            // Click event for closing the fullwidth container (including close button)
-            $(document).on("click", ".fullwidth, .expand, button[data-close]", function (e) {
-                // Prevent the event from propagating to parent elements
-                e.stopPropagation();
 
-                // Find the closest fullwidth container
-                var fullwidthContainer = $(this).closest(".fullwidth");
+        //h2
+        $(document).on("click", "h2.clickable", function () {
+            var targetId = $(this).data("target");
+            var isOpen = $(targetId).hasClass("is-hidden");
 
-                // Hide the fullwidth container
-                //orig  fullwidthContainer.addClass("is-hidden");
-                // fullwidthContainer.addClass("is-hidden"); // Adjust the duration as needed
+            // Get the background color of the parent li element
+            var color = $(this).closest("li").css('background-color');
 
-                // Fade out the fullwidth container and add the is-hidden class
-                fullwidthContainer.fadeOut(1000, function () {
-                    // Hide the fullwidth container after fading out                
+            // Close all open fullwidth containers
+            $(".fullwidth").addClass("is-hidden");
 
-                    fullwidthContainer.addClass("is-hidden");
-                    //  $("li").removeClass("expand");
+            // Makes li container full width
+            $("li").removeClass("expand");
+            $(this).parent("li").toggleClass("expand");
+            // hides mini icon in li box
+            $('.open').addClass("is-hidden");
+            // hides span icon in li box
+            $('span').addClass("is-hidden");
+            // hides span icon in li box
+            $('.tooltip').addClass("is-hidden");
+            // removes box style and replaces with slim line version
+            $(this).parent("li").removeClass("box");
 
-                });
 
-                $("li").removeClass("expand");
+
+            // Scroll to the top-left corner of the selected li element
+            function scrollToTopLeft(selector) {
+                var selectedElement = $(selector);
+
+                if (selectedElement.length > 0) {
+                    var offset = selectedElement.offset();
+
+                    $('html, body').animate({
+                        scrollTop: offset.top,
+                        scrollLeft: offset.left
+                    }, 'slow');
+                }
+            }
+
+            scrollToTopLeft($(this).closest("li"));
+
+            // If the clicked container was not open, open it and set background color
+            if (isOpen) {
+                $(targetId).css({
+                    backgroundColor: color,
+                    height: $(window).height() + "px"
+                }).removeClass("is-hidden").toggle().fadeIn(1000);
+            }
+        });
+
+
+        //h2end
+
+
+        // Click event for closing the fullwidth container (including close button)
+        $(document).on("click", ".fullwidth, .expand, button[data-close]", function (e) {
+            // Prevent the event from propagating to parent elements
+            e.stopPropagation();
+
+            // Find the closest fullwidth container
+            var fullwidthContainer = $(this).closest(".fullwidth");
+            var liContainer = $(this);
+            // displays mini icon in li box
+            $('.open').removeClass("is-hidden");
+            // displays span icon in li box
+            $('span').removeClass("is-hidden");
+            // displays tooltip icon in li box
+            $('.tooltip').removeClass("is-hidden");
+            // displays box style again
+            liContainer.addClass("box");
+
+
+            // Fade out the fullwidth container and add the is-hidden class
+            fullwidthContainer.fadeOut(1000, function () {
+                // Hide the fullwidth container after fading out                
+
                 fullwidthContainer.addClass("is-hidden");
-
-                // Remove the selected state class from all li elements$("li").removeClass("expand");
-                //      $("li").removeClass("is-selected");
-
-
+                //  $("li").removeClass("expand");
 
             });
-        })
-    }
+
+            $("li").removeClass("expand");
+            fullwidthContainer.addClass("is-hidden");
+
+        });
+
+
+
+    });
+
 
 });
+
+
+
+
