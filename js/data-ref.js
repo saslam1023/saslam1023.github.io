@@ -38,7 +38,7 @@ $(document).ready(function () {
         const targetItemCount = 8;
 
 
-        // *** Load dynamic data from a JSON file using jQuery
+        // *** Load dynamic data from JSON file using jQuery
         $.getJSON('json/data.json', function (data) {
             $.each(data.items, function (i, f) {
                 let tblRow = "";
@@ -84,7 +84,7 @@ $(document).ready(function () {
             });
 
 
-            // Placeholders for full grid style view
+            // *** Placeholders for full grid style view
 
             // Check the current number of li elements after dynamic data is loaded
             const currentItemCount = gridContainer.children('.box').length;
@@ -201,40 +201,74 @@ $(document).ready(function () {
 
         // Click function
 
-        $(document).on("click", ".clickable", function () {
+        // Click event handler for clickable elements and fullwidth containers
+        $(document).on("click", ".clickable, .fullwidth, .expand, button[data-close]", function (e) {
+            e.stopPropagation();
+
+            // Check if the clicked element is a clickable element
+            if ($(this).hasClass("clickable")) {
+                handleClickableClick.call(this);
+            } else {
+                handleCloseClick.call(this);
+            }
+        });
+
+        // Function to handle clicks on clickable elements
+        function handleClickableClick() {
             var targetId = $(this).data("target");
             var isOpen = $(targetId).hasClass("is-hidden");
-
-            // Get the background color of the parent li element
+            var isActive = $(targetId).hasClass("active");
             var color = $(this).closest("li").css('background-color');
+            var liContainer = $(this); // this is the h2/content within the box
+            var liBox = $(this).parent("li"); // the box
+            var fullwidthContainer = $(this).closest(".fullwidth");
+            var fullWidth = liBox.next("li"); // this is the fullscreen li
+
 
             // Close all open fullwidth containers
-            $(".fullwidth").addClass("is-hidden");
+            // add in 'if class is 'active' then close' 
+            /*    if (isActive) {
+                    $(this).removeClass('active expand');
+    
+                    $(".fullwidth").addClass("is-hidden");
+                }*/
 
-            // Makes li container full width
-            $("li").removeClass("expand");  // removes any previous open containers
-            $(this).parent("li").toggleClass("expand");
+            // Remove any previous open containers
+            // Remove 'active' class from all elements with class 'active'
+            $('.active').removeClass('active p1');
+            // Remove 'expand' class from all elements with class 'expand'
+            $('.expand').removeClass('expand p2');
+            $('.fullwidth').removeClass('fullwidth p3');
+            //   $(liContainer).removeClass("expand active");
+            //  $(".fullwidth").addClass("is-hidden");
+            //   $(fullWidth).removeClass("active fullwidth");
 
-            $('.open, span, .tooltip').addClass("is-hidden"); // hides non text content
-            $(this).parent("li").removeClass("box illuminate"); // removes box effects
-            //  $(this).parent("li").addClass("clickable");
-            $(this).addClass("clicked");
+
+
+
+            // Make the clicked li container full width
+            $(liContainer).addClass("expand clicked active"); // this is the h2 in libox
+            // Remove box effects
+            liBox.removeClass("box illuminate fullwidth box");
+            // Hide non-text content
+            $('.open').addClass("is-hidden OOOOOO is-hidden  dafudge");
+            $('span').addClass("is-hidden OOOOOO is-hidden  dafudge");
+            $('.tooltip').addClass("is-hidden OOOOOO is-hidden  dafudge");
+
+            console.log(liContainer)
+
+
+
+
+            // Add fullwidth and expand to box for full view
+            liBox.addClass("fullwidth expand clicked active") // fullwidth box li
+            // Add clicked class for styling
+            //  liContainer.addClass("clicked");
+
+            $(fullWidth).addClass("fullwidth active FULLWIDTHcontainer"); // this is the fullscreen li correct
 
 
             // Scroll to the top-left corner of the selected li element
-            function scrollToTopLeft(selector) {
-                var selectedElement = $(selector);
-
-                if (selectedElement.length > 0) {
-                    var offset = selectedElement.offset();
-
-                    $('html, body').animate({
-                        scrollTop: offset.top,
-                        scrollLeft: offset.left
-                    }, 'slow');
-                }
-            }
-
             scrollToTopLeft($(this).closest("li"));
 
             // If the clicked container was not open, open it and set background color
@@ -243,55 +277,94 @@ $(document).ready(function () {
                     backgroundColor: color,
                     height: $(window).height() + "px"
                 }).removeClass("is-hidden").toggle().fadeIn(1000);
+
+
+                // Display icons and restore box styles
+                $('.open, span, .tooltip').removeClass("is-hidden");
+
+                /*    // Displays original box styling
+                    //  liContainer.addClass("box illuminate 11"); // h2
+                    liContainer.addClass("expand  fullwidth active clicked 33"); // h2
+                    liContainer.parent("li").addClass("expand  fullwidth active clicked 33");
+                    liContainer.parent("li").removeClass("box illuminate 22"); //li box
+                    //hide  liContainer.removeClass("clicked");
+    /*/
+                console.log(liContainer) // h2
+                console.log(liContainer.parent("li")) // li
+
+                // Fade out the fullwidth container and hide it
+                fullwidthContainer.fadeOut(1000, function () {
+                    fullwidthContainer.addClass("is-hidden");
+                });
+
+                // Remove the expand class from li containers
+                $("li").removeClass("expand active");
+                // Hide the fullwidth container
+                fullwidthContainer.addClass("is-hidden ");
+                // Reset styling for h2 elements with clickable class
+                $('h2.clickable').removeClass("clicked");
+
             }
-        });
 
+            // Function to scroll to the top-left corner of a given element
+            function scrollToTopLeft(selector) {
+                var selectedElement = $(selector);
 
-        //h2end
+                if (selectedElement.length > 0) {
+                    var offset = selectedElement.offset();
 
+                    // Animate scrolling to the top-left corner
+                    $('html, body').animate({
+                        scrollTop: offset.top,
+                        scrollLeft: offset.left
+                    }, 'slow');
+                }
 
-        // Click event for closing the fullwidth container (including close button)
-        $(document).on("click", ".fullwidth, .expand, button[data-close]", function (e) {
-            // Prevent the event from propagating to parent elements
-            e.stopPropagation();
-
-            // Find the closest fullwidth container
-            var fullwidthContainer = $(this).closest(".fullwidth");
-            var liContainer = $(this);
-            // displays mini icon in li box
-            $('.open').removeClass("is-hidden");
-            // displays span icon in li box
-            $('span').removeClass("is-hidden");
-            // displays tooltip icon in li box
-            $('.tooltip').removeClass("is-hidden");
-            // displays box style again
-            liContainer.addClass("box");
-            liContainer.addClass("illuminate");
-            // removes box style and replaces with slim line version
-            $(this).parent("li").removeClass("box");
-            $(this).parent("li").removeClass("illuminate");
-            $(this).removeClass("clicked");
-
-
-            console.log(fullwidthContainer);
-            console.group(liContainer);
-
-
-            // Fade out the fullwidth container and add the is-hidden class
-            fullwidthContainer.fadeOut(1000, function () {
-                // Hide the fullwidth container after fading out                
-
-                fullwidthContainer.addClass("is-hidden");
-                //  $("li").removeClass("expand");
-
-            });
-
-            $("li").removeClass("expand");
-            fullwidthContainer.addClass("is-hidden");
-            $('h2.clickable').removeClass("clicked");
-
-        });
-
+            }
+        }/*/
+                    /* temporary pause
+                            // Function to handle clicks on elements for closing the fullwidth container
+                            function handleCloseClick() {
+                                var fullwidthContainer = $(this).closest(".fullwidth");
+                                var liContainer = $(this);
+                                console.log(liContainer);
+                                console.log(fullwidthContainer);
+                                console.log(this);
+                    
+                                // Display icons and restore box styles
+                                $('.open, span, .tooltip').removeClass("is-hidden");
+                                liContainer.addClass("box illuminate ");
+                                liContainer.parent("li").removeClass("box illuminate");
+                                liContainer.removeClass("clicked");
+                    
+                                // Fade out the fullwidth container and hide it
+                                fullwidthContainer.fadeOut(1000, function () {
+                                    fullwidthContainer.addClass("is-hidden");
+                                });
+                    
+                                // Remove the expand class from li containers
+                                $("li").removeClass("expand");
+                                $("li").addClass("in-active");
+                                // Hide the fullwidth container
+                                fullwidthContainer.addClass("is-hidden ");
+                                // Reset styling for h2 elements with clickable class
+                                $('h2.clickable').removeClass("clicked");
+                            }
+                    
+                            // Function to scroll to the top-left corner of a given element
+                            function scrollToTopLeft(selector) {
+                                var selectedElement = $(selector);
+                    
+                                if (selectedElement.length > 0) {
+                                    var offset = selectedElement.offset();
+                    
+                                    // Animate scrolling to the top-left corner
+                                    $('html, body').animate({
+                                        scrollTop: offset.top,
+                                        scrollLeft: offset.left
+                                    }, 'slow');
+    } 
+    }*/
 
 
     });

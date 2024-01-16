@@ -83,7 +83,7 @@ function initializeSearch() {
         searchOptions.innerHTML = '';
         matches.forEach(match => {
             const li = document.createElement('li');
-            li.textContent = document.querySelectorAll('h1, h2, h3')[match.index].textContent;
+            li.textContent = document.querySelectorAll('h1, h2, h3, .clickable')[match.index].textContent;
             li.dataset.index = match.index;
             searchOptions.appendChild(li);
         });
