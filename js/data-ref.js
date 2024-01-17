@@ -304,6 +304,11 @@ $(document).ready(function () {
                 // Reset styling for h2 elements with clickable class
                 $('h2.clickable').removeClass("clicked");
 
+                // added this
+                $('.open, span, .tooltip').removeClass("is-hidden");
+                $('.clickable').removeClass("clicked"); // removes clickable from h2
+                $('.boxshadow').addClass("box illuminate"); // displays box style
+
             }
 
             // Function to scroll to the top-left corner of a given element

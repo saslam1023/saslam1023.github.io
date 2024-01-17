@@ -290,6 +290,14 @@ $(document).ready(function () {
             fullwidthContainer.addClass("is-hidden");
             $('h2.clickable').removeClass("clicked");
 
+
+            /*   // added
+   
+               $('.open, span, .tooltip').removeClass("is-hidden");
+               $('.clickable').removeClass("clicked"); // removes clickable from h2
+               $('.boxshadow').addClass("box illuminate"); // displays box style
+   */
+
         });
 
 
