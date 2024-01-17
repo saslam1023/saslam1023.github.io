@@ -98,14 +98,14 @@ function initializeSearch() {
     }
 
     function clearHighlight() {
-        const headings = document.querySelectorAll('h1, h2, h3');
+        const headings = document.querySelectorAll('h1, h2, h3, .clickable');
         headings.forEach(heading => {
             heading.innerHTML = heading.innerText;
         });
     }
 
     function scrollToElement(index) {
-        const targetElement = document.querySelectorAll('h1, h2, h3')[index];
+        const targetElement = document.querySelectorAll('h1, h2, h3, .clickable')[index];
         targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
         clearHighlight();
         // Highlight the matched text
@@ -113,7 +113,7 @@ function initializeSearch() {
     }
 
     function highlightMatches(matches) {
-        const headings = document.querySelectorAll('h1, h2, h3');
+        const headings = document.querySelectorAll('h1, h2, h3, .clickable');
         headings.forEach((heading, index) => {
             const headingText = heading.innerText;
             let highlightedText = '';
@@ -145,7 +145,7 @@ function initializeSearch() {
             // Check if the item with the same index has already been added
             if (!addedIndexes.includes(index)) {
                 const li = document.createElement('li');
-                li.textContent = document.querySelectorAll('h1, h2, h3')[index].textContent;
+                li.textContent = document.querySelectorAll('h1, h2, h3, .clickable')[index].textContent;
                 li.dataset.index = index;
                 searchOptions.appendChild(li);
 
