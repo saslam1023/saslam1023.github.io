@@ -9,28 +9,9 @@
     --black: #000;
     --white: #fff;
     --highlight-color: rgb(255, 240, 0);
+    --max-lines: 10;
     --gray: #777;
     --lightgray: #d1d1d1;
-    --gradientR: radial-gradient(circle, hsla(0, 0%, 22%, 1) 0%, hsla(0, 0%, 0%, 1) 100%);
-    --gradientL: linear-gradient(360deg, hsla(0, 0%, 22%, 1) 0%, hsla(95, 83%, 47%, 1) 10%, hsla(0, 0%, 0%, 1) 20%, hsla(192, 83%, 47%, 1) 30%, hsla(0, 0%, 0%, 1) 40%, hsla(0, 0%, 100%, 1) 50%, hsla(0, 0%, 0%, 1) 60%, hsla(314, 83%, 47%, 1) 70%, hsla(0, 0%, 0%, 1) 80%, hsla(40, 91%, 50%, 1) 90%, hsla(0, 0%, 0%, 1) 100%);
-    --gradientC: conic-gradient(from 135deg, black, gray);
-    /* --illuminate: radial-gradient(circle, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 0.8) 100%);
-    /* illuminate inset option white
-   --boxshadow: inset 0 0 10px rgba(255, 255, 255, 0.4),
-        inset 0 0 20px rgba(255, 255, 255, 0.3),
-        inset 0 0 30px rgba(255, 255, 255, 0.2),
-        inset 0 0 40px rgba(255, 255, 255, 0.1);
-*/
-    /* Add a dark translucent radial gradient for the opposite effect */
-    /* --illuminate: conic-gradient(from -45deg, rgba(128, 128, 128, 0), rgba(0, 0, 0, 0.2), rgba(128, 128, 128, 0));*/
-    --illuminate: radial-gradient(circle, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.07) 100%);
-
-    /* Add a translucent inset box shadow for the opposite effect */
-    /*    --box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4),
-        inset 0 0 20px rgba(0, 0, 0, 0.3),
-        inset 0 0 30px rgba(0, 0, 0, 0.2),
-        inset 0 0 40px rgba(0, 0, 0, 0.1);*/
-    --bowshadow: none;
     --transparent-gray-box: rgba(222, 222, 222, 0.3);
     --transparent-gray-box2: rgba(222, 222, 222, 0.6);
 
@@ -38,11 +19,9 @@
 
 * {
     margin: 0;
-    font-family: 'Silkscreen', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
+    font-family: 'DM Mono', monospace;
+    font-size: 16px;
     word-wrap: break-all;
-    line-height: auto;
 }
 
 
@@ -57,32 +36,23 @@ a {
 /* Text, Headings, Font */
 
 h1 {
-    font-size: 20px;
+    font-size: 48px;
     word-wrap: break-all;
-
+    font-family: 'Silkscreen', sans-serif;
+    font-weight: 400;
 }
 
-.box h1,
-.box h2,
-.box h3,
-.box h4,
-.box p,
-.box i {
-    padding: 0px;
+.box h1 {
+    padding: 10px;
 }
 
-h2 {
-    font-size: 18px;
+h2,
+.h2 {
+    font-size: 32px;
     word-wrap: break-all;
-}
-
-h3 {
-    font-size: 16px;
-    word-wrap: break-all;
-}
-h4 {
-    font-size: 14px;
-    word-wrap: break-all;
+    padding-top: 20px;
+    font-family: 'Silkscreen', sans-serif;
+    font-weight: 400;
 }
 
 .small {
@@ -125,34 +95,25 @@ header {
     border: 1px solid red;
 }
 
-.box,
-li.box {
+.box {
     color: white;
     text-align: center;
-    width: 100%;
+    width: 150px;
     aspect-ratio: 1;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    position: relative;
-    transition: background-color 2s ease-in, transform 1s ease-in-out 2s, translate 2s linear 2s, translate ease-in 2s;
-
+    /* border: 1px solid black;*/
 }
 
-
-
-
-
-small {
-    font-size: 8px;
+.dash-box {
+    width: 150px;
+    height: 150px;
 }
 
-.icon-clr {
-    width: 100%;
-    background-color: none;
-    display: block;
-    position: absolute;
-    top: 0;
+.dash-content-box {
+    width: 80%;
+
 }
 
 /* Images */
@@ -169,31 +130,12 @@ small {
 
 .open {
     position: absolute;
-    display: block;
     color: #000;
-    width: max-content;
+    width: fit-content;
     height: auto;
-    right: 0px;
-    top: 0px;
+    right: 20px;
+    top: 20px;
     padding: 5px;
-}
-
-.boxIcon {
-    display: absolute;
-    margin: 0 auto;
-}
-
-.miniIcon {
-    display: absolute;
-    margin: 0 auto;
-    right: 0;
-
-}
-
-.right {
-    float: right;
-    text-align: right;
-    vertical-align: top;
 }
 
 .md-64 {
@@ -224,13 +166,17 @@ small {
 
 .center {
     text-align: center;
+    margin: 0 auto;
+}
+
+.pad20 {
+    padding: 20px;
 }
 
 /* Colours  */
 
 .pink {
     background-color: var(--fuschia);
-    transform: rotate(360deg);
 }
 
 .pinkt {
@@ -239,9 +185,6 @@ small {
 
 .blue {
     background-color: var(--lightblue);
-    animation: scaleSize 2s ease-in-out;
-
-
 }
 
 .bluet {
@@ -250,77 +193,18 @@ small {
 
 .green {
     background-color: var(--green);
-    animation: scaleSize 2s ease-in-out;
-
 }
 
 .greent {
     color: var(--green);
 }
 
-
-@keyframes scaleSize {
-
-    0% {
-        transform: scale(0);
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0.5;
-        background-color: white;
-        transform: scale(1);
-    }
-
-}
-
-@keyframes fadeInOut {
-
-    0%,
-    100% {
-        opacity: 0;
-        /* Start and end with opacity set to 0 */
-    }
-
-    50% {
-        opacity: 1;
-        /* Peak opacity in the middle of the animation */
-    }
-}
-
-
-@keyframes gentlefadeInOut {
-
-    0%,
-    100% {
-        opacity: 0.7;
-        /* Start and end with opacity set to 0 */
-    }
-
-    50% {
-        opacity: 1;
-        /* Peak opacity in the middle of the animation */
-    }
-}
-
-/* .colored-box {
-    width: 100px;
-    height: 100px;
-    background-color: blue; /* Choose your desired color 
-animation: fadeInOut 10s ease-in-out infinite;
-/* 10-second animation with ease-in-out timing function, set to repeat indefinitely 
-  }*/
-
 .gold {
     background-color: var(--gold);
-    animation: fadeInOut 5s ease-in-out;
-    animation: gentlefadeInOut 10s ease-in-out infinite;
-    /* 10-second animation with ease-in-out timing function, set to repeat indefinitely */
 }
 
 .goldt {
     color: var(--gold);
-
 }
 
 .black {
@@ -333,30 +217,6 @@ animation: fadeInOut 10s ease-in-out infinite;
     color: var(--black);
 }
 
-.gray {
-    background-color: var(--gray);
-    color: var(--lightgray);
-    text-align: center;
-    justify-content: center;
-}
-
-.gradientR {
-    background-image: var(--gradientR);
-}
-
-.gradientL {
-    background-image: var(--gradientL);
-}
-
-.gradientC {
-    background-image: var(--gradientC);
-}
-
-.round-border {
-    border: 3px solid black;
-    border-radius: 3;
-}
-
 .blackt {
     color: var(--black);
 }
@@ -364,6 +224,20 @@ animation: fadeInOut 10s ease-in-out infinite;
 .whitet {
     color: var(--white);
 }
+
+.lightgray {
+    background-color: var(--lightgray);
+}
+
+.transparentBox {
+    background-color: rgba(222, 222, 222, 0.3);
+}
+
+.transparentBox2 {
+    background-color: rgba(222, 222, 222, 0.6);
+}
+
+
 
 /* Media queries */
 
@@ -377,8 +251,6 @@ animation: fadeInOut 10s ease-in-out infinite;
     .box {
         width: auto;
         border: 0px solid black;
-        align-items: center;
-        display: flex;
     }
 
 }
@@ -409,14 +281,6 @@ button:focus {
     outline-width: 0;
 }
 
-textarea {
-    width: 100%;
-    height: 50px;
-}
-
-input {
-    width: 100px;
-}
 
 /* Search bar */
 #search-bar-container {
@@ -425,13 +289,11 @@ input {
     border: 0px;
     padding: 0;
     text-align: left;
-    top: 0;
-    vertical-align: top;
 }
 
 #search-bar {
     padding: 2px;
-    width: 90%;
+    width: 100%;
     height: 32px;
 }
 
@@ -439,7 +301,8 @@ input {
     list-style: none;
     padding: 0;
     margin: 0;
-    position: relative;
+    position: absolute;
+    top: 100%;
     left: 0;
     width: 100%;
     border: 0px solid #ddd;
@@ -469,7 +332,6 @@ input {
     border: 0px solid red;
     display: inline;
     width: 20px;
-    float: right;
 }
 
 .highlight {
@@ -520,11 +382,11 @@ input {
 
 /* quick view */
 
-/*body {
+body {
     margin: 0;
     padding: 0;
     ;
-}*/
+}
 
 
 ul[class] {
@@ -583,25 +445,21 @@ ul[class] li>* {
 
 }
 
-.grid-container {
+.table-container {
     /* ADDED */
     position: relative;
     transition: opacity 2s ease;
+    margin: 50px;
 }
 
 /* [3] Make fullwidth card span all grid columns. */
 .fullwidth {
     grid-column: 1 / -1;
+    height: 100vh;
     width: 100%;
-    height: auto;
     overflow: hidden;
     transition: height 1s ease-in-out, position 1s ease, opacity 2s ease;
 
-}
-
-.box>.fullwidth {
-    border-bottom: 1px solid black;
-    width: 100%;
 }
 
 .is-hidden {
@@ -615,6 +473,7 @@ ul[class] li>* {
 }
 
 .fullwidth:not(.is-hidden) {
+    height: 100vh;
     overflow: auto;
     top: 0;
     left: 0;
@@ -623,11 +482,10 @@ ul[class] li>* {
 
 .fullwidth,
 .is-selected {
-
+    background-color: gainsboro;
+    /* background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);/*/
     color: var(--black);
-    height: auto;
 }
-
 
 
 .fade-out {
@@ -637,32 +495,31 @@ ul[class] li>* {
 
 .expand {
     grid-column: 1 / -1;
-    padding-top: 20px;
-    height: auto;
+    height: 10px;
     width: 100%;
-
+    z-index: 10;
 }
+
 
 .li:not(.expand) {
     grid-column: 1 / 8;
 }
 
 .expand h1 {
+    padding-top: 100px;
     font-size: 32px;
-}
-
-.expand h2::before {
-    content: '';
-}
-
-.expand h2 {
-    font-size: 32px;
-
 }
 
 hr {
     border-bottom: 1px solid black;
     width: 100%;
+
+}
+
+.fullwidth {
+    padding-left: 50px;
+    padding-top: 100px;
+    width: 100vw;
 
 }
 
@@ -679,11 +536,11 @@ hr {
 
 li>div.contentLayout {
     margin: 50px auto;
-
+    vertical-align: middle;
 }
 
 .contentLayout p,
-.contentLayout blockquote,
+.contentLayoutPara,
 .contentLayout:active,
 .contentLayout:hover {
     font-family: 'DM Mono', monospace;
@@ -691,26 +548,17 @@ li>div.contentLayout {
     color: var(--black);
 }
 
-.contentLayout blockquote {
+.contentLayout p,
+.contentLayoutPara {
+    float: right;
     background: var(--transparent-gray-box);
-    padding: 32px;
-    width: 40%;
+    padding: 30px;
+    width: 100%;
     margin: 16px;
-    font-size: 22px;
-    font-style: italic;
-    font-weight: bold;
-    display: inline-block;
 }
 
-.contentLayout p {
-    background: var(--transparent-gray-box);
-    padding: 32px;
-    width: auto;
-    margin: 0 16px;
-    display: inline-block;
-}
-
-.contentLayout h2 {
+.contentLayout h2,
+.contentLayoutH2 {
     text-align: left;
     width: 300px;
     background: var(--transparent-gray-box2);
@@ -721,75 +569,123 @@ li>div.contentLayout {
     aspect-ratio: 1;
 }
 
-
-.pad50 {
-    padding-bottom: 50px;
-}
-
-.square-box {
-    width: 200px;
-    height: 200px;
-    background:
-        conic-gradient(from 0deg at 50% 0%, #ffffff 0%, #e0e0e0 25%, #333333 75%, #ffffff 100%) top,
-        conic-gradient(from 90deg at 100% 50%, #e0e0e0 0%, #ffffff 25%, #333333 75%, #e0e0e0 100%) right,
-        conic-gradient(from 180deg at 50% 100%, #ffffff 0%, #e0e0e0 25%, #333333 75%, #ffffff 100%) bottom,
-        conic-gradient(from 270deg at 0% 50%, #e0e0e0 0%, #ffffff 25%, #333333 75%, #e0e0e0 100%) left;
-    border: 5px solid #ffffff;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    margin: 20px;
-}
-
-.illuminate {
-    background-image: var(--illuminate);
-}
-
-.boxshadow {
-    box-shadow: var(--boxshadow);
-}
-
-
-.clickable {
-    width: 90%;
-    height: auto;
-    /*  border: 0px solid red;*/
-}
-
-.clicked {
-    padding-left: 50px;
-    padding-right: 25px;
+.table,
+.form-wrapper {
+    width: 80%;
+    padding: 0px;
+    background-color: var(--black);
+    color: white;
+    margin: 0 auto;
 
 }
 
+.tr {
+    background-color: #14b4dc32;
+    max-height: 40px;
+    overflow: hidden;
+    border: 0px solid black;
+}
 
-h2.clicked {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 16px;
-    background-color: var(--highlight-color);
+.dark {
+    background-color: #14b4dc;
+}
+
+.td {
+    overflow: scroll;
+    white-space: nowrap;
+    max-width: 200px;
+}
+
+
+tr,
+td {
+    font-size: 12px;
+    vertical-align: top;
+    width: 100%;
+}
+
+
+/* Define styles for even and odd rows */
+tr:nth-child(even) {
+    background-color: #14b4dc32;
+    /* Light gray or your preferred color */
+}
+
+tr:nth-child(odd) {
+    background-color: #14b4dc70;
+    /* White or your preferred color */
+}
+
+.datebox {
+    border: 0;
     width: auto;
 }
 
-/* this works too
-h2.clicked::after {
-    content: "\00a0";
-}
-*/
+input,
+textarea {
+    width: 400px;
+    display: inline-block;
+    min-height: 20px;
+    border-radius: 8px;
+    background-color: none;
+    margin: 10px;
+    padding: 10px;
 
-.dm-mono-regular {
-    font-family: "DM Mono", monospace;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.dm-mono-medium {
-    font-family: "DM Mono", monospace;
-    font-weight: 500;
-    font-style: normal;
 }
 
-.dm-mono-light-italic {
-    font-family: "DM Mono", monospace;
-    font-weight: 300;
-    font-style: italic;
+textarea {
+    overflow: auto;
+    height: 200px;
+
+}
+
+.required {
+    font-weight: 600;
+
+}
+
+.label {
+    width: 100%;
+    padding: 10px;
+}
+
+.submit {
+    position: relative;
+    width: auto;
+}
+
+.clear {
+    position: relative;
+    width: auto;
+}
+
+.right {
+    position: absolute;
+    right: 0;
+}
+
+.flex {
+    display: flex;
+    gap: 20px;
+    grid-auto-flow: dense;
+
+}
+
+.three {
+    width: 100%;
+}
+
+.defaultStyle {
+    color: transparent;
+    font-size: 16px;
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    display: block;
+}
+
+.defaultStyleX {
+    color: black;
+    font-size: 16px;
+    display: block;
 }

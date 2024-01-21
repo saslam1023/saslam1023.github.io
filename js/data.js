@@ -62,15 +62,18 @@ $(document).ready(function () {
                     </li>`;
                     } else if (h2 !== "" || boxcontent !== "empty") {
                         tblRow = `
-                    <li class='box illuminate boxshadow ${f.item.colour}'>
-                        <h2 class='clickable' data-target='#quickview-${f.id}'>${f.h2}</h2>${f.icon}${f.boxcontent}
+                    <li class='box illuminate  ${f.item.colour}'><div class='icon-clr'><a href='${f.boxlink}' target='_blank'>${f.icon}</a></div>
+                        <h2 class='clickable' data-target='#quickview-${f.id}'>${f.h2}</h2>${f.boxcontent}
                     </li>
                     <li class='fullwidth is-hidden' id='quickview-${f.id}'>
                         <div class='contentLayout'>
                             <h2 class='md-48 pad50'>${f.item.heading}</h2>
-                            <div>${f.item.content}</div>
-                            <p class='md-32 pad50'>Test <a href='#'>inline ${f.item.link} link</a>.</p>
+                            <h3 class='md-48 pad50'>${f.item.subheading}</h3>
+                            <h4 class='md-48 pad50'>${f.item.date}</h4>
+                            <div><p>${f.item.content}</p></div>
+
                         </div>
+                       
                     </li>`;
                     } else if (boxcontent === "empty") {
                         tblRow = `<li class='box illuminate boxshadow ${f.item.colour}' ></li>`;
