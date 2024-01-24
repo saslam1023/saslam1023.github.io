@@ -56,8 +56,9 @@ $(document).ready(function () {
                     <li class='fullwidth is-hidden' id='quickview-${f.id}'>
                         <div class='contentLayout'>
                             <h2 class='md-48 pad50'>${f.item.heading}</h2>
+                            <h3 class='md-32 pad50'>${f.item.subheading}</h3>
+                            <h4 class='md-16 pad50'>${f.item.date}</h4>
                             <div>${f.item.content}</div>
-                            <p class='md-32 pad50'>Test <a href='#'>inline ${f.item.link} link</a>.</p>
                         </div>
                     </li>`;
                     } else if (h2 !== "" || boxcontent !== "empty") {
@@ -67,13 +68,17 @@ $(document).ready(function () {
                     </li>
                     <li class='fullwidth is-hidden' id='quickview-${f.id}'>
                         <div class='contentLayout'>
-                            <h2 class='md-48 pad50'>${f.item.heading}</h2>
-                            <h3 class='md-48 pad50'>${f.item.subheading}</h3>
-                            <h4 class='md-48 pad50'>${f.item.date}</h4>
-                            <div><p>${f.item.content}</p></div>
-
-                        </div>
-                       
+                        <div class='contentLayoutDiv'>
+                        <h2 class='md-48 pad50'>${f.item.heading}</h2>
+                        <h4 class='md-16 pad50'>${f.item.date}</h4>
+                       </div>
+    
+                        <figure><img src="images/${f.item.image}">
+                        <figcaption class='caption'>${f.item.caption}</figcaption></figure>
+                        <h3 class='md-32 pad50'>${f.item.subheading}</h3>
+                        
+                        <div>${f.item.content}</div>
+                        </div>        
                     </li>`;
                     } else if (boxcontent === "empty") {
                         tblRow = `<li class='box illuminate boxshadow ${f.item.colour}' ></li>`;
