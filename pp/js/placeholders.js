@@ -1,21 +1,22 @@
-$(document).ready(function () {
-    const gridContainer = document.querySelector('#grid');
-    const targetItemCount = 8;
 
-    // Placeholders for full grid style view
 
-    // Check the current number of li elements after dynamic data is loaded
-    const currentItemCount = gridContainer.children('.box').length;
+const gridContainer = document.querySelector('#grid');
+const targetItemCount = 8;
 
-    // Calculate the remaining items needed to complete the last row
-    const remainingItems = targetItemCount - (currentItemCount % targetItemCount);
+// Placeholders for full grid style view
 
-    // Add placeholder li elements only for the last row
-    if (remainingItems > 0) {
-        addPlaceholders(remainingItems);
+// Check the current number of li elements after dynamic data is loaded
+const currentItemCount = gridContainer.querySelectorAll('.box').length;
 
-    }
-});
+// Calculate the remaining items needed to complete the last row
+const remainingItems = targetItemCount - (currentItemCount % targetItemCount);
+
+// Add placeholder li elements only for the last row
+if (remainingItems > 0) {
+    addPlaceholders(remainingItems);
+
+}
+
 // Placeholder additions
 let placeholdersLoaded = false;
 

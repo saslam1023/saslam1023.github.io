@@ -48,11 +48,14 @@ a :visited {
 h1 {
     font-size: 20px;
     word-wrap: break-all;
+    padding-bottom: 10px;
 }
 
 h2 {
     font-size: 18px;
     word-wrap: break-all;
+    padding-bottom: 10px;
+
 
 }
 
@@ -66,11 +69,14 @@ h4 {
     word-wrap: break-all;
 }
 
-small .small {
+small,
+.small {
     font-size: 8px;
 }
 
-
+.bold {
+    font-weight: bold;
+}
 
 .md-64 {
     font-size: 64px;
@@ -98,7 +104,7 @@ small .small {
 
 .box,
 li.box {
-    color: var(--white);
+
     text-align: center;
     width: 100%;
     aspect-ratio: 1;
@@ -106,12 +112,17 @@ li.box {
     align-items: center;
     overflow: hidden;
     position: relative;
-    transition: background-color 2s ease-in, transform 1s ease-in-out 2s, translate 2s linear 2s, translate ease-in 2s;
+    transition: box-shadow 1s ease-in-out, background-color 0.5s ease-in-out, background-image 1s ease-in-out, color 1s ease-in-out, transform 1s ease-in-out 2s, translate 2s linear 2s, translate ease-in 2s;
+}
+
+li.box:hover {
+    color: black;
+    /* background-image: var(--gradientR);*/
 
 }
 
-li.box h2 {
-    color: blue;
+li.boxh2 {
+    color: white;
 }
 
 
@@ -136,8 +147,8 @@ li.box h2 {
 
 .miniIcon {
     display: absolute;
-    margin: 0 auto;
-    right: 0;
+    margin: 3px;
+    float: right;
 }
 
 
@@ -425,10 +436,22 @@ li>div.contentLayout {
 
 .contentLayout p {
     background: var(--transparent-gray-box);
-    padding: 32px;
+    padding: 16px 48px 16px 128px;
+    margin: 0 20px;
     width: auto;
-    margin: 0 16px;
     display: inline-block;
+}
+
+.contentLayout p:last-child {
+
+    padding-bottom: 32px;
+    margin-bottom: 16px;
+}
+
+.contentLayout p:first-child {
+
+    padding-top: 32px;
+    margin-top: 16px;
 }
 
 .contentLayoutDiv {
@@ -486,13 +509,13 @@ h4 {
 
 /* Interactivity */
 .active {
-    border: 2px solid yellow;
+    border: 0px solid yellow;
     width: 100%;
     grid-column: 1 / -1;
 }
 
 .inactive {
-    border: 1px solid red;
+    border: 0px solid red;
 }
 
 .expand {
@@ -502,9 +525,101 @@ h4 {
     width: 100%;
 }
 
+.expand h1,
+.expand h2 {
+    background-color: var(--highlight-color);
+    padding: 10px 30px;
+    color: var(--black);
+}
+
+.expand .boxIcon {
+    display: none;
+}
+
+
+
 .li:not(.expand) {
     grid-column: 1 / 8;
 }
+
+
+
+/* Animates and effects */
+.boxIcon {
+    transition: transform 2s ease-in;
+}
+
+#explore {
+    animation: spin 10s infinite;
+    animation-delay: 10s;
+}
+
+#bug {
+    color: white;
+    animation: disAppear 1s infinite;
+    animation-delay: 2s;
+    /* Adjust duration as needed */
+}
+
+.flip {
+    animation: fa-flip 10s infinite linear;
+}
+
+#create {
+    animation: pencil 10s infinite;
+}
+
+@keyframes pencil {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(30deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes disAppear {
+    0% {
+        transform: rotate(-2deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
 
 /* Media queries */
 

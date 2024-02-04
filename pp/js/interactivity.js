@@ -1,33 +1,4 @@
-/*$(document).on("click", "h1, h2, h3, .clickable, .expand", function () {
-    const boxContainer = $(this).parent("li");
-    const boxContainerBro = $(this).closest("li");
-    const boxContainerBro2 = $(this).closest("fullwidth");
-    const fullwidthContainer = boxContainer.closest(".fullwidth");
 
-    fullwidthContainer.removeClass("is-hidden CC");
-    fullwidthContainer.addClass("is-selected BB");
-    boxContainer.addClass("active");
-    console.log(fullwidthContainer)
-    console.log(boxContainer)
-    console.log(boxContainerBro)
-    console.log(boxContainerBro2)
-
-    if (boxContainer.hasClass('active')) {
-        console.log("erm")
-    }
-});
-
-/*
-let box = document.getElementsByClassName('box');
-
-box.addEventListener('click', function run() {
-    box.style.backgroundColor = "gray"
-    box.style.fontSize = "1em"
-})
-*/
-
-
-// Click function
 // Click function
 $(document).on("click", "h1, h2, .clickable", function () {
     const targetId = $(this).data("target");
@@ -79,7 +50,7 @@ $(document).on("click", "h1, h2, .clickable", function () {
     }
 
     scrollToTopLeft(parentLi);
-
-
-
 });
+
+
+

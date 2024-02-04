@@ -19,6 +19,7 @@ $(document).ready(function initializeSearch() {
 
     searchBar.addEventListener('keydown', function (event) {
         if (event.key === 'Enter') {
+            $(this).style.backgroundColor = "yellow";
             event.preventDefault(); // Prevent the default form submission
             search();
         }
