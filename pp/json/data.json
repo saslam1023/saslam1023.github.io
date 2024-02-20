@@ -8,18 +8,19 @@
             "h3": "Sharp. Clear. Distinct.",
             "icon": "",
             "boxlink": "",
-            "boxcontent": "<span class='boxIcon material-icons-round whitet md-32'>star_rate</span>",
+            "boxcontent": "<span class='boxIcon material-icons-round whitet md-64'>star_rate</span>",
+            "boxtype": "content",
             "item": {
                 "heading": "Pixel Perfect",
                 "subheading": "Sharp. Clear. Distinct.",
-                "date": "",
-                "image": "images/placeholder.jpg",
+                "date": "January 2024",
+                "image": "",
                 "alt": "",
                 "figure": "hidden",
                 "caption": "",
-                "content": "<p><span class=`bold`>Pixel Perfect</span> is a reference to the design or rendering of digital content, such as websites, graphics, or user interfaces, in the context that every pixel is precisely positioned and displayed as intended.</p><p>It implies achieving a high level of accuracy and attention to detail in the placement, size, and alignment of individual pixels.</p><p>In the context of web or graphic design, achieving pixel perfection means that the final output closely matches the original design without any distortion, blurriness, or misalignment. This level of precision is often important in creating visually appealing and professional-looking digital products.",
+                "content": "<p><span class=`bold`>Pixel Perfect</span>  is the digital portfolio of Creative Technologist (read designer and developer), saslam1023.</p><p>Pixel Perfect is a reference to the design of digital content, such as websites, graphics, or user interfaces where every pixel is precisely positioned and displayed as intended.</p><p>In the context of web or graphic design, achieving pixel perfection means that the final output closely matches the original design without any distortion, blurriness, or misalignment. This level of precision is important in creating visually appealing and professional-looking digital products.",
                 "colour": "black",
-                "block": "It implies achieving a high level of accuracy and attention to detail in the placement, size, and alignment of individual pixels.",
+                "block": "Achieving pixel perfection means that the final output closely matches the original design",
                 "link": "#",
                 "status": "live"
             },
@@ -33,11 +34,12 @@
             "id": 2,
             "category": "Fixed",
             "h1": "",
-            "h2": "<strong>Welcome</strong>. <span class='pinkt'>Please explore.</span> ",
+            "h2": "<span class='highlight'>Welcome.</span><br><span class='gold'>Please</span><br><span class='green'>explore.</span> ",
             "h3": "",
             "icon": "",
             "boxlink": "blank",
             "boxcontent": "",
+            "boxtype": "display",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -67,6 +69,7 @@
             "icon": "",
             "boxlink": "blank",
             "boxcontent": "empty",
+            "boxtype": "display",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -76,7 +79,7 @@
                 "figure": "hidden",
                 "caption": "",
                 "content": "",
-                "colour": "pink",
+                "colour": "blue",
                 "block": "",
                 "link": "",
                 "status": "live"
@@ -96,6 +99,7 @@
             "icon": "<span class='miniIcon material-symbols-rounded md-16 open whitet' id='clear-btn'>close</span>",
             "boxlink": "blank",
             "boxcontent": "<div id='search-bar-container><h2 class='blackt left'>Search</h2><input type='text' id='search-bar' placeholder='?'><ul id='search-options'></ul><div id='search-results'></div>",
+            "boxtype": "display",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -125,6 +129,7 @@
             "icon": "",
             "boxlink": "",
             "boxcontent": "empty",
+            "boxtype": "display",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -134,7 +139,7 @@
                 "figure": "hidden",
                 "caption": "",
                 "content": "",
-                "colour": "blue",
+                "colour": "white",
                 "block": "",
                 "link": "#",
                 "status": "live"
@@ -153,7 +158,8 @@
             "h3": "",
             "icon": "<span class='miniIcon material-icons-round whitet md-16 open'>help_outline</span>",
             "boxlink": "blank",
-            "boxcontent": "",
+            "boxcontent": "<span class='boxIcon whitet fa-solid fa-pen-ruler md-64'></span>",
+            "boxtype": "content",
             "item": {
                 "heading": "I'm a crafter",
                 "subheading": "Crafting is my speciality",
@@ -183,6 +189,7 @@
             "icon": "",
             "boxlink": "blank",
             "boxcontent": "empty",
+            "boxtype": "display",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -212,6 +219,7 @@
             "icon": "",
             "boxlink": "blank",
             "boxcontent": "<span class='boxIcon material-icons-round md-64 whitet'>perm_phone_msg</span>",
+            "boxtype": "content",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -221,7 +229,7 @@
                 "figure": "hidden",
                 "caption": "",
                 "content": "",
-                "colour": "green",
+                "colour": "pink",
                 "block": "",
                 "link": "",
                 "status": "live"
@@ -241,6 +249,7 @@
             "icon": "",
             "boxlink": "",
             "boxcontent": "empty",
+            "boxtype": "display",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -250,7 +259,7 @@
                 "figure": "hidden",
                 "caption": "",
                 "content": "",
-                "colour": "green",
+                "colour": "gold",
                 "block": "",
                 "link": "#",
                 "status": "live"
@@ -270,6 +279,7 @@
             "icon": "",
             "boxlink": "blank",
             "boxcontent": "<span class='boxIcon material-icons-round blackt md-64' id='explore'>explore</span>",
+            "boxtype": "content",
             "item": {
                 "heading": "Creative Design",
                 "subheading": "It's not all PhotoShop and Posters",
@@ -299,6 +309,7 @@
             "icon": "",
             "boxlink": "blank",
             "boxcontent": "empty",
+            "boxtype": "display",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -328,6 +339,7 @@
             "icon": "",
             "boxlink": "blank",
             "boxcontent": "empty",
+            "boxtype": "display",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -352,21 +364,22 @@
             "id": 13,
             "category": "",
             "h1": "",
-            "h2": "",
+            "h2": "Projects",
             "h3": "",
             "icon": "",
             "boxlink": "blank",
-            "boxcontent": "empty",
+            "boxcontent": "<span class='boxIcon blackt md-64 fa-solid fa-cubes-stacked'></span>",
+            "boxtype": "content",
             "item": {
-                "heading": "",
-                "subheading": "",
+                "heading": "Projects",
+                "subheading": "Like spinning plates",
                 "date": "",
                 "image": "",
                 "alt": "",
                 "figure": "hidden",
                 "caption": "",
-                "content": "",
-                "colour": "gold",
+                "content": "<p><span>Projects</span>, there are many.  Always an on-going process, updates, upgrades, additions. A selection for your review.</p><p><ul><li>Project one</li><li>Project two</li><li>Project three</li></ul></p>",
+                "colour": "blue",
                 "block": "",
                 "link": "",
                 "status": "live"
@@ -386,6 +399,7 @@
             "icon": "<span class=' miniIcon open blackt md-16 material-icons-round'>open_in_new</span>",
             "boxlink": "https://github.com/saslam1023/",
             "boxcontent": "<a href='https://github.com/saslam1023/' target='_blank'><svg height='64' aria-hidden='true' viewBox='0 0 16 16' version='1.1' width='64' data-view-component='true' class='boxIcon octicon octicon-mark-github v-align-middle color-fg-default'><path d='M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'></path></svg></a>",
+            "boxtype": "display",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -415,6 +429,7 @@
             "icon": "",
             "boxlink": "blank",
             "boxcontent": "empty",
+            "boxtype": "display",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -443,7 +458,8 @@
             "h3": "",
             "icon": "",
             "boxlink": "blank",
-            "boxcontent": "<a href='https://www.buymeacoffee.com/saslam1023' target='_blank'><img src='images/giphy.gif' width='100' height='100' alt='Buy me a coffee'></a>",
+            "boxcontent": "<a href='https://www.buymeacoffee.com/saslam1023' target='_blank'><img src='../images/giphy.gif' width='75' height='75' alt='Buy me a coffee'></a>",
+            "boxtype": "display",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -472,7 +488,8 @@
             "h3": "",
             "icon": "",
             "boxlink": "blank",
-            "boxcontent": "<span class='boxIcon fa-solid fa-swatchbook md-64 whitet' id='swatchbook'></span>",
+            "boxcontent": "<span class='boxIcon span whitet md-64 fa-solid fa-splotch bounce'></i>",
+            "boxtype": "content",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -502,6 +519,7 @@
             "icon": "",
             "boxlink": "blank",
             "boxcontent": "empty",
+            "boxtype": "display",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -531,6 +549,7 @@
             "icon": "",
             "boxlink": "blank",
             "boxcontent": "empty",
+            "boxtype": "display",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -560,6 +579,7 @@
             "icon": "<span class='miniIcon open md-16 blackt material-icons-round'>open_in_new</span>",
             "boxlink": "https://scratch.mit.edu/projects/931605727",
             "boxcontent": "<a href='https://scratch.mit.edu/projects/931605727' target='_blank'><span class='boxIcon material-icons-round md-64 whitet' id='bug'>bug_report</span></a>",
+            "boxtype": "content",
             "item": {
                 "heading": "Bug Invasion",
                 "subheading": "A game",
@@ -589,6 +609,7 @@
             "icon": "",
             "boxlink": "blank",
             "boxcontent": "empty",
+            "boxtype": "display",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -618,6 +639,7 @@
             "icon": "",
             "boxlink": "blank",
             "boxcontent": "empty",
+            "boxtype": "display",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -647,6 +669,7 @@
             "icon": "",
             "boxlink": "https://www.edx.org/learn/computer-science/harvard-university-cs50-s-introduction-to-computer-science",
             "boxcontent": "<span class='boxIcon material-icons-round whitet md-64'>school</span>",
+            "boxtype": "content",
             "item": {
                 "heading": "CS50: Computer Science",
                 "subheading": "Harvard University ",
@@ -655,7 +678,7 @@
                 "alt": "",
                 "figure": "hidden",
                 "caption": "",
-                "content": "<p><span class=`bold`>Just the word 'Computer science'</span> fills me with dread as a creative right brainer. Visually I see scary numbers drifting off into infinity, complicated equations that look like they're strangling a hangman game, complex mathematics that suck you into a dark abyss. Nothing like the vibrant,  aligned,  creative design world I live in.</p><p>I discovered  CS50 through a blog post which highly recommended it, while researching programming languages. I had a look at the free Harvard course, which you can find <a href='https://www.edx.org/learn/computer-science/harvard-university-cs50-s-introduction-to-computer-science' target='_blank'>here on the EDX site</a> if you're interested in doing it too.</p><p> As I had been looking into Python programming, I was impressed by the varied course content which featured a number of languages, including C, Python, SQL, and JavaScript as well as CSS and HTML, so I signed up.</p><p>The course starts right from the beginning. 0's and 1's. It was easy to follow in the beginning, where we were introduced to Scratch (a free coding community for kids) and our first assignment was to make a game using Scratch.  It wasn't as straightforward as you'd think!  Some experimenting with the different 'parts' used to 'build' code was necessary. After some time, it was actually fun seeing it all come together and working.</p><p>The following 3 lectures really made my brain hurt. If you're creative, you might struggle, but it's doable if you really want it. I found some parts of the course easier like the image related ones and struggled with the voting ones. Reached a big rut at session 4. Got a surge of motivation and pushed through. Haven't completed the course yet but fully intend too.I took on this course because I wanted to learn about this tool I've been using for the longest time. Having the knowledge of how it actually works, might just help to understand, why or how certain things happened and this in turn should help to create better programs, designs, and experiences.Check out my scratch game bug invasion.",
+                "content": "<p><span class=`bold`>Just the word 'Computer science'</span> fills me with dread as a creative right brainer but equally inspires a curiosity to the logical, analytical left brainer on the flip side. Visually I see scary numbers drifting off into infinity, complicated equations that look like they're strangling a hangman game, complex mathematics that suck you into a dark abyss. Nothing like the vibrant, aligned, creative designed world my head lives in.</p><p>And yet, these same numbers of 0's and 1's, these building blocks of... tbc  <h3>Discovery</h3><p>I discovered  CS50 through a blog post which highly recommended it, while researching programming languages. I had a look at the free Harvard course, which you can find <a href='https://www.edx.org/learn/computer-science/harvard-university-cs50-s-introduction-to-computer-science' target='_blank'>here on the EDX site</a> if you're interested in doing it too.</p><p>I had been looking into Python programming, and was impressed by the varied course content which featured a number of languages, including C, Python, SQL, and JavaScript as well as CSS and HTML, so I signed up.</p><h3>Scratchin'</h3><p>The course starts right from the beginning. 0's and 1's. It was easy to follow in the beginning, where we were introduced to Scratch (a free coding community for kids) and our first assignment was to make a game using Scratch.  It wasn't as straightforward as you'd think!  Some experimenting with the different 'parts' used to 'build' code was necessary. After some time, it was actually fun seeing it all come together and working. You can check out my Scratch game Bug Invasion here.</p><h3>Pushing through</h3><p>The following 3 lectures really tested my brain and patience and I found some parts of the course easier if they were visual but found I needed to work a lot harder with some of the technical ones. Haven't completed the course yet but fully intend too! <h3>Why?</h3><p>I took on this course because I wanted to learn about this tool (computers) that I've been using for the longest time. It's a bit like finally getting to really know a friend you've known forever but never actually knew anything about - because you never asked. It transpires you're discovering there is so much more to them and there is now another level to your relationship. There is the hope that having the knowledge of how this tech actually works, may help to understand, the why or how certain things happened (where the term debugging came from is a good one) and this in turn should help in the endeavours to create better programs, designs, and experiences.  ",
                 "colour": "black",
                 "block": "",
                 "link": "",
@@ -676,6 +699,7 @@
             "icon": "",
             "boxlink": "blank",
             "boxcontent": "empty",
+            "boxtype": "display",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -705,6 +729,7 @@
             "icon": "",
             "boxlink": "blank",
             "boxcontent": "empty",
+            "boxtype": "display",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -733,16 +758,17 @@
             "h3": "",
             "icon": "",
             "boxlink": "blank",
-            "boxcontent": "<span class='boxIcon material-icons-round whitet md-64' id='create'>create</span>",
+            "boxcontent": "<span class='boxIcon fa-solid fa-pencil shake whitet md-64' id='create'></span>",
+            "boxtype": "content",
             "item": {
-                "heading": "Site design test",
-                "subheading": "The Pixel Perfect concept",
+                "heading": "Site design",
+                "subheading": "The Pixel Perfect story",
                 "date": "",
                 "image": "",
                 "alt": "",
                 "figure": "hidden",
                 "caption": "",
-                "content": "What does it all mean??",
+                "content": "<p><span>The design</span> of the Pixel Perfect site was inspired by many components, thoughts, and ideas, culminating into the vibrant design presented before you.</p><h3 class='md-32'>Colour</h3><p>The seven colour palette used on the site comes from a blend of digital and print inspired colours. My twist on rgb (red, green, blue) featuring a fushcia/magenta fusion, mellowed old school screen green, and perfect blue sky. Traditional print inspired black and white with a hint of luxury gold (you might see orange, its digital gold). And for the all important highlight and contrast effect its a buzz of yellow. </p><p>As a colour lover, creating a meaningful, vibrant, and accessible palette was at the heart of the sites design.</p><h3 class='md-32'>Shape</h3><p>Boxes. Bits. Bytes. Compartments. Representations. </p><h3 class='md-32'>Size</h3><p>Size is everything.</p>",
                 "colour": "green",
                 "block": "",
                 "link": "",
@@ -763,6 +789,7 @@
             "icon": "",
             "boxlink": "blank",
             "boxcontent": "empty",
+            "boxtype": "display",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -792,6 +819,7 @@
             "icon": "",
             "boxlink": "blank",
             "boxcontent": "empty",
+            "boxtype": "display",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -820,7 +848,8 @@
             "h3": "Bootcamp",
             "icon": "",
             "boxlink": "blank",
-            "boxcontent": "<span class='boxIcon fa-solid fa-code flip whitet md-64' id='devices'></span>",
+            "boxcontent": "<span class='boxIcon fa-solid fa-code spin whitet md-64' id='devices'></span>",
+            "boxtype": "content",
             "item": {
                 "heading": "Software Development",
                 "subheading": "It's a mixed bag",
@@ -850,6 +879,7 @@
             "icon": "",
             "boxlink": "blank",
             "boxcontent": "empty",
+            "boxtype": "display",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -879,6 +909,7 @@
             "icon": "",
             "boxlink": "blank",
             "boxcontent": "empty",
+            "boxtype": "display",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -903,11 +934,12 @@
             "id": 32,
             "category": "End",
             "h1": "",
-            "h2": "",
+            "h2": "©",
             "h3": "",
             "icon": "",
             "boxlink": "blank",
             "boxcontent": "<small>Copyright<br> saslam1023<br>2024</small>",
+            "boxtype": "display",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -936,7 +968,8 @@
             "h3": "",
             "icon": "",
             "boxlink": "https://www.linkedin.com/in/smeena-aslam/' target='_blank'",
-            "boxcontent": "<a href='https://www.linkedin.com/in/smeena-aslam/' target='_blank'><span class='boxIcon whitet md-64 fa-brands fa-linkedin '></span>",
+            "boxcontent": "<a href='https://www.linkedin.com/in/smeena-aslam/' target='_blank'><span class='boxIcon whitet md-64 fa-brands fa-linkedin'></span></a>",
+            "boxtype": "display",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -965,7 +998,38 @@
             "h3": "",
             "icon": "",
             "boxlink": "blank",
-            "boxcontent": "",
+            "boxcontent": "empty",
+            "boxtype": "display",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "alt": "",
+                "figure": "hidden",
+                "caption": "",
+                "content": "",
+                "colour": "white",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 35,
+            "category": "",
+            "h1": "",
+            "h2": "Calculator",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "<span class='boxIcon blackt md-64 fa-solid fa-calculator'></span>",
+            "boxtype": "display",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -976,6 +1040,96 @@
                 "caption": "",
                 "content": "",
                 "colour": "pink",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 36,
+            "category": "End",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "empty",
+            "boxtype": "display",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "alt": "",
+                "figure": "hidden",
+                "caption": "",
+                "content": "",
+                "colour": "gold",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 37,
+            "category": "End",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "empty",
+            "boxtype": "display",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "alt": "",
+                "figure": "hidden",
+                "caption": "",
+                "content": "",
+                "colour": "black",
+                "block": "",
+                "link": "",
+                "status": "live"
+            },
+            "contact": {
+                "name": "Smeena",
+                "email": "",
+                "phone": ""
+            }
+        },
+        {
+            "id": 38,
+            "category": "End",
+            "h1": "",
+            "h2": "",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "empty",
+            "boxtype": "display",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "alt": "",
+                "figure": "hidden",
+                "caption": "",
+                "content": "",
+                "colour": "white",
                 "block": "",
                 "link": "",
                 "status": "live"

@@ -7,6 +7,7 @@ $(document).on("click", "h1, h2, .clickable", function () {
     const active = $('li').hasClass("active");
     const parentLi = $(this).parent("li"); // ?
     const color = parentLi.css('background-color');
+    const textcolor = parentLi.css('color');
     const fullwidthContainer = $(this).closest(".fullwidth"); // ?
 
 
@@ -33,15 +34,17 @@ $(document).on("click", "h1, h2, .clickable", function () {
             backgroundColor: color,
             height: $(window).height() + "px"
         }).removeClass("is-hidden").addClass("active"); // activates the fullwidth box  
-        $(boxId).addClass("expand active P4").removeClass("box inactive"); // keep this  ADDS INITIAL
+        $(boxId).addClass("expand active").removeClass("box inactive"); // keep this  ADDS INITIAL
     }
 
-    // Scrolls into position / view
 
+    // Scroll to the top-left corner of the selected li element
     function scrollToTopLeft(selector) {
-        const selectedElement = $(selector);
+        var selectedElement = $(selector);
+
         if (selectedElement.length > 0) {
-            const offset = selectedElement.offset();
+            var offset = selectedElement.offset();
+
             $('html, body').animate({
                 scrollTop: offset.top,
                 scrollLeft: offset.left
@@ -49,8 +52,5 @@ $(document).on("click", "h1, h2, .clickable", function () {
         }
     }
 
-    scrollToTopLeft(parentLi);
+    scrollToTopLeft($(this).closest("li"));
 });
-
-
-

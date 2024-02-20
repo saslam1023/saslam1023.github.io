@@ -48,14 +48,12 @@ a :visited {
 h1 {
     font-size: 20px;
     word-wrap: break-all;
-    padding-bottom: 10px;
 }
 
 h2 {
     font-size: 18px;
     word-wrap: break-all;
     padding-bottom: 10px;
-
 
 }
 
@@ -115,10 +113,10 @@ li.box {
     transition: box-shadow 1s ease-in-out, background-color 0.5s ease-in-out, background-image 1s ease-in-out, color 1s ease-in-out, transform 1s ease-in-out 2s, translate 2s linear 2s, translate ease-in 2s;
 }
 
-li.box:hover {
-    color: black;
+.xli.box h2:hover {
+    color: yellow;
+    background-color: #000;
     /* background-image: var(--gradientR);*/
-
 }
 
 li.boxh2 {
@@ -328,8 +326,6 @@ ul[class] li>* {
     outline: 0;
 }
 
-/* [1] 'auto-fit' grid columns, so no media queries required. */
-/* [2] 'dense' packing fills in holes earlier in the grid. */
 .grid {
     display: grid;
     gap: 0rem;
@@ -398,12 +394,15 @@ ul[class] li>* {
 
 /* Full width Content */
 
+
+
 .contentLayout {
     width: 80%;
     border: 0px solid black;
     background: var(--transparent-gray-box);
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     align-content: space-between;
     columns: 2;
     column-gap: 5%;
@@ -456,13 +455,14 @@ li>div.contentLayout {
 
 .contentLayoutDiv {
     text-align: left;
-    width: 300px;
+    max-width: 300px;
     background: var(--transparent-gray-box2);
     font-family: 'DM Mono', monospace;
     font-style: italic;
     font-weight: 300;
     padding: 30px;
     aspect-ratio: 1;
+    padding-top: -80px;
 }
 
 /*.contentLayout h2 {
@@ -482,6 +482,10 @@ h4 {
     font-style: italic;
 }
 
+.contentLayout h4 {
+    margin-bottom: 30px;
+}
+
 .caption {
     font-size: 12px;
     font-family: 'DM Mono', monospace;
@@ -493,8 +497,8 @@ h4 {
     font-weight: bold;
     background-color: var(--transparent-gray-box-dark);
     padding: 30px;
-    width: 100%;
-    margin: 20px;
+    width: auto;
+    margin: 0 100px;
     text-align: center;
 }
 
@@ -504,6 +508,11 @@ h4 {
 
 .pad50 {
     padding-bottom: 50px;
+}
+
+.pad100 {
+    padding-bottom: 100px;
+
 }
 
 
@@ -516,6 +525,11 @@ h4 {
 
 .inactive {
     border: 0px solid red;
+}
+
+.inactive:hover {
+    filter: invert(1);
+
 }
 
 .expand {
@@ -561,27 +575,27 @@ h4 {
     /* Adjust duration as needed */
 }
 
-.flip {
-    animation: fa-flip 10s infinite linear;
+.spin {
+    color: white;
+    animation: fa-flip 5s infinite;
+    animation-delay: 2s;
+    /* Adjust duration as needed */
 }
 
-#create {
-    animation: pencil 10s infinite;
+.shake {
+    color: white;
+    animation: fa-shake 30s infinite;
+    animation-delay: 4s;
+    /* Adjust duration as needed */
 }
 
-@keyframes pencil {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    50% {
-        transform: rotate(30deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
-    }
+.bounce {
+    color: white;
+    animation: fa-bounce 2s;
+    animation-delay: 10s;
 }
+
+
 
 @keyframes disAppear {
     0% {
@@ -594,6 +608,7 @@ h4 {
 
     100% {
         transform: rotate(0deg);
+
     }
 }
 
@@ -614,6 +629,7 @@ h4 {
 
 .hidden {
     display: none;
+
 }
 
 .visible {

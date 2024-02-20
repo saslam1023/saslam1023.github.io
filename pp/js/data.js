@@ -43,13 +43,14 @@ function processData(data) {
         const h2 = `${item.h2}`;
         let box = ``;
         const boxcontent = `${item.boxcontent}`;
+        const boxtype = `${item.boxtype}`;
         const figure = `${item.item.figure}`;
 
-
+        // if status is live/true
         if (status === "live") {
-
+            // then if h1 is not empty
             if (h1 !== "") {
-                // h1 text boxes
+                // h1 text boxes - display
                 box = `<li class='box illuminate ${item.item.colour} inactive' id='box-${item.id}'>
                 <h1 class='clickable' data-link='#box-${item.id}' data-target='#quickview-${item.id}'>${item.h1}</h1>
                 ${item.boxcontent}
@@ -58,15 +59,30 @@ function processData(data) {
                         <div class='contentLayout'>
                             <div class='contentLayoutDiv'>
                                 <h2 class='md-48 pad50'>${item.item.heading}</h2>
-                                <h4 class='md-16 pad50'>${item.item.date}</h4>
-                            </div><figure class='hidden'><img src="images/${item.item.image}">
+                                <h4 class='md-16'>${item.item.date}</h4>
+                                <h3 class='md-32'>${item.item.subheading}</h3>
+                                
+                                
+                            </div>
+                            
+                            <figure class='hidden'><img src="images/${item.item.image}">
                                     <figcaption class='caption'>${item.item.caption}</figcaption></figure>
-                                    <h3 class='md-32 pad50'>${item.item.subheading}</h3>
-                            <div>${item.item.content}</div>
+                                    
+                                    
+                                    <div>
+                                    ${item.item.content}</div>
                         </div>
                     </li>`;
             }
-            // h2 boxes and has content
+            // Boxes with no additional content - if h2 is not empty and boxcontent is 'nocontent' display box but no fullwidth container
+            else if (h2 !== "" && boxtype === "display") {
+                box = `<li class='box illuminate ${item.item.colour} inactive''>
+                <div class='icon-clr'>
+                <a href='${item.boxlink}' target='_blank'>${item.icon}</a>
+                </div>
+                <h2>${item.h2}</h2>${item.boxcontent}</li > `;
+            }
+            // h2 boxes and has content and h2 is not empty OR boxcontent is not equal to 'empty' then display boxes
             else if (h2 !== "" || boxcontent !== "empty") {
 
                 box = `<li class='box illuminate ${item.item.colour} inactive' id='box-${item.id}'>
@@ -89,10 +105,11 @@ function processData(data) {
                     </li>`;
 
             }
-            // Blank boxes
+            // Blank boxes - if boxcontent is 'empty' display blank boxes
             else if (boxcontent === "empty") {
-                box = `<li class="box ${item.item.colour} inactive"  id='box-${item.id}'></li> `;
+                box = `<li class="box ${item.item.colour}"'></li> `;
             }
+            // If box status is equal to 'pending' don't display anything
             else if (status === 'pending') {
                 box = ``;
             }
@@ -104,13 +121,6 @@ function processData(data) {
 
 
 }
-//let placeholdersLoaded = false;        // Run the search function only 
-
-
-
-
-
-
 
 function placeTheHolders() {
     /// Placeholders for full grid style view
@@ -153,7 +163,7 @@ function placeTheHolders() {
             usedColorsInRow.push(randomColor);
 
             const placeholderLi = document.createElement('li');
-            placeholderLi.classList.add('box', 'illuminate', 'boxshadow', randomColor, 'round-border');
+            placeholderLi.classList.add('box', 'illuminate', 'boxshadow', randomColor);
             placeholderLi.textContent = '';
 
             gridContainer.append(placeholderLi);
@@ -331,5 +341,8 @@ function placeTheHolders() {
         }
     }
 
+
+
 }
+
 loadData();
