@@ -54,3 +54,24 @@ $(document).on("click", "h1, h2, .clickable", function () {
 
     scrollToTopLeft($(this).closest("li"));
 });
+
+// Tabbing
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'Tab') {
+        event.preventDefault(); // Prevent default tab behavior
+        const activeElement = document.activeElement;
+        let nextTabIndex = null;
+
+        // Find the next tabindex based on the active element
+        if (activeElement.tagName.toLowerCase() === 'li') {
+            const currentIndex = parseInt(activeElement.getAttribute('tabindex'));
+            nextTabIndex = currentIndex + 1;
+        }
+
+        // Focus on the element with the next tabindex
+        const nextElement = document.querySelector(`[tabindex="${nextTabIndex}"]`);
+        if (nextElement) {
+            nextElement.focus();
+        }
+    }
+});

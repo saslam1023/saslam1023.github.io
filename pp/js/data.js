@@ -51,56 +51,61 @@ function processData(data) {
             // then if h1 is not empty
             if (h1 !== "") {
                 // h1 text boxes - display
-                box = `<li class='box illuminate ${item.item.colour} inactive' id='box-${item.id}'>
+                box = `<li class='box illuminate ${item.item.colour} inactive' id='box-${item.id}' tabindex='${item.id}'>
                 <h1 class='clickable' data-link='#box-${item.id}' data-target='#quickview-${item.id}'>${item.h1}</h1>
                 ${item.boxcontent}
                 </li >
                     <li class='fullwidth is-hidden' id='quickview-${item.id}'>
-                        <div class='contentLayout'>
-                            <div class='contentLayoutDiv'>
-                                <h2 class='md-48 pad50'>${item.item.heading}</h2>
+                    <div class='contentLayout'>
+                    <div class='flex-container'>
+                    <div class='flex-item square'>
+                                <h2 class='md-48'>${item.item.heading}</h2>
                                 <h4 class='md-16'>${item.item.date}</h4>
-                                <h3 class='md-32'>${item.item.subheading}</h3>
-                                
-                                
-                            </div>
-                            
-                            <figure class='hidden'><img src="images/${item.item.image}">
-                                    <figcaption class='caption'>${item.item.caption}</figcaption></figure>
-                                    
-                                    
-                                    <div>
+                                </div>
+                                <div class='flex-item w-60'>
                                     ${item.item.content}</div>
+                            <div class='flex-item w-30'>
+                             <h3 class='md-16 flex-item'>${item.item.subheading}</h3></div><div class='flex-item w-30'>
+                            <figure class='hidden'><img src="images/${item.item.image}" class='flex-item'><figcaption class='caption'>${item.item.caption}</figcaption></figure></div>
+                            
+                                    </div>
                         </div>
                     </li>`;
             }
             // Boxes with no additional content - if h2 is not empty and boxcontent is 'nocontent' display box but no fullwidth container
             else if (h2 !== "" && boxtype === "display") {
-                box = `<li class='box illuminate ${item.item.colour} inactive''>
+                box = `<li class='box illuminate ${item.item.colour} inactive'  tabindex='${item.id}'>
                 <div class='icon-clr'>
                 <a href='${item.boxlink}' target='_blank'>${item.icon}</a>
                 </div>
                 <h2>${item.h2}</h2>${item.boxcontent}</li > `;
             }
+
             // h2 boxes and has content and h2 is not empty OR boxcontent is not equal to 'empty' then display boxes
             else if (h2 !== "" || boxcontent !== "empty") {
 
-                box = `<li class='box illuminate ${item.item.colour} inactive' id='box-${item.id}'>
+                box = `<li class='box illuminate ${item.item.colour} inactive' id='box-${item.id}' tabindex='${item.id}>
                 <div class='icon-clr'>
                 <a href='${item.boxlink}' target='_blank'>${item.icon}</a>
                 </div>
                 <h2 class='clickable' data-link='#box-${item.id}' data-target='#quickview-${item.id}'>${item.h2}</h2>
                 ${item.boxcontent}</li >
                     <li class='fullwidth is-hidden' id='quickview-${item.id}'>
-                        <div class='contentLayout'>
-                            <div class='contentLayoutDiv'>
-                                <h2 class='md-48 pad50'>${item.item.heading}</h2>
-                                <h4 class='md-16 pad50'>${item.item.date}</h4>
-                            </div>
-                            <figure class='${item.item.figure}'><img src="images/${item.item.image}">
-                                            <figcaption class='caption'>${item.item.caption}</figcaption></figure><h3 class='md-32 pad50'>${item.item.subheading}</h3>
-
-                            <div>${item.item.content}</div>
+                    <div class='contentLayout'>
+                    <div class='flex-container'>
+                    <div class='flex-item square'>
+                                <h2 class='md-48'>${item.item.heading}</h2>
+                                <h4 class='md-16'>${item.item.date}</h4>
+                                </div>
+                                <div class='flex-item w-60'>
+                                    ${item.item.content}</div>
+                            <div class='flex-item w-30'>
+                             <h3 class='md-32 flex-item square'>${item.item.subheading}</h3>
+                        <figure class=' ${item.item.figure}'>
+                        <img src='images/${item.item.image}'>
+                         <figcaption class='caption'>${item.item.caption}</figcaption></figure></div>
+                         
+                        </div>
                         </div>
                     </li>`;
 
@@ -152,6 +157,7 @@ function placeTheHolders() {
 
         for (let i = 0; i < remainingItems; i++) {
             const availableColors = colors.filter(color => !usedColorsInRow.includes(color));
+
             let randomColor;
 
             if (availableColors.length === 0) {

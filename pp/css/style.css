@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,300&family=Silkscreen:wght@400;700&display=swap');
 
 :root {
-    --fuschia: #dc14ad;
+    --fuchsia: #dc14ad;
     --lightblue: #14b4dc;
     --green: #67dc14;
     --crimson: crimson;
@@ -16,7 +16,7 @@
     --gradientC: conic-gradient(from 135deg, black, gray);
     --illuminate: radial-gradient(circle, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.07) 100%);
     --bowshadow: none;
-    --transparent-gray-box: rgba(222, 222, 222, 0.3);
+    --transparent-gray-box: rgba(222, 222, 222, 0.5);
     --transparent-gray-box2: rgba(222, 222, 222, 0.6);
     --transparent-gray-box-dark: rgba(222, 222, 222, 0.8);
 }
@@ -154,11 +154,11 @@ li.boxh2 {
 /* Colours  */
 
 .pink {
-    background-color: var(--fuschia);
+    background-color: var(--fuchsia);
 }
 
 .pinkt {
-    color: var(--pink);
+    color: var(--fuchsia);
 }
 
 .blue {
@@ -398,19 +398,32 @@ ul[class] li>* {
 
 .contentLayout {
     width: 80%;
-    border: 0px solid black;
-    background: var(--transparent-gray-box);
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: space-between;
-    columns: 2;
-    column-gap: 5%;
+
 }
 
 li>div.contentLayout {
     margin: 50px auto;
 
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex-item {
+    box-sizing: border-box;
+    padding: 16px;
+}
+
+.w-60 {
+    width: 60%;
+    background: var(--transparent-gray-box);
+}
+
+.w-30 {
+    width: 40%;
 }
 
 .contentLayout p,
@@ -421,6 +434,39 @@ li>div.contentLayout {
     font-size: 16px;
     color: var(--black);
 }
+
+.contentLayout a {
+    font-family: 'DM Mono', monospace;
+    font-weight: 700;
+}
+
+.contentLayout ul {
+    background-color: var(--transparent-gray-box);
+    ;
+    /* Set the background color for the list */
+}
+
+.contentLayout ul li {
+    font-family: 'DM Mono', monospace;
+    font-size: 16px;
+    color: var(--black);
+    list-style: square;
+    margin-left: 50px;
+    margin-right: 100px;
+    padding-left: 10px;
+    padding-bottom: 16px;
+
+    /* Background for list items */
+}
+
+.contentLayout ul li::marker {
+    background-color: var(--transparent-gray-box);
+    /* Background color for list item markers */
+    color: var(--black);
+    /* Marker color */
+}
+
+
 
 .contentLayout blockquote {
     background: var(--transparent-gray-box);
@@ -435,10 +481,9 @@ li>div.contentLayout {
 
 .contentLayout p {
     background: var(--transparent-gray-box);
-    padding: 16px 48px 16px 128px;
-    margin: 0 20px;
-    width: auto;
-    display: inline-block;
+    padding: 16px;
+
+
 }
 
 .contentLayout p:last-child {
@@ -492,14 +537,27 @@ h4 {
     padding: 0 8px;
 }
 
-.contentLayout h3 {
+.contentLayout h1,
+h3 {
     font-family: 'DM Mono', monospace;
     font-weight: bold;
+    padding: 16px;
+    width: 300px;
+    text-align: left;
+}
+
+.square {
+    max-height: 400px;
+    max-width: 400px;
+    aspect-ratio: 1;
     background-color: var(--transparent-gray-box-dark);
-    padding: 30px;
-    width: auto;
-    margin: 0 100px;
-    text-align: center;
+}
+
+.minisq {
+    max-height: 150px;
+    max-width: 150px;
+    aspect-ratio: 1;
+    background-color: var(--transparent-gray-box2);
 }
 
 .contentLayout div img {

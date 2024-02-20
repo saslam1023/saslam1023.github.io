@@ -5,29 +5,24 @@
             "category": "Fixed",
             "h1": "Pixel Perfect",
             "h2": "",
-            "h3": "Sharp. Clear. Distinct.",
+            "h3": "",
             "icon": "",
             "boxlink": "",
             "boxcontent": "<span class='boxIcon material-icons-round whitet md-64'>star_rate</span>",
             "boxtype": "content",
             "item": {
                 "heading": "Pixel Perfect",
-                "subheading": "Sharp. Clear. Distinct.",
+                "subheading": "",
                 "date": "January 2024",
                 "image": "",
                 "alt": "",
                 "figure": "hidden",
                 "caption": "",
-                "content": "<p><span class=`bold`>Pixel Perfect</span>  is the digital portfolio of Creative Technologist (read designer and developer), saslam1023.</p><p>Pixel Perfect is a reference to the design of digital content, such as websites, graphics, or user interfaces where every pixel is precisely positioned and displayed as intended.</p><p>In the context of web or graphic design, achieving pixel perfection means that the final output closely matches the original design without any distortion, blurriness, or misalignment. This level of precision is important in creating visually appealing and professional-looking digital products.",
+                "content": "<p><span class=`bold`>Pixel Perfect</span>  is the digital portfolio of Creative Technologist, Smeena.</p><p>Pixel Perfect is a reference to the design of digital content, such as websites, graphics, or user interfaces where every pixel is precisely positioned and displayed as intended.</p><p>In the context of web or graphic design, achieving pixel perfection means that the final output closely matches the original design without any distortion, blurriness, or misalignment. This level of precision is important in creating visually appealing and professional-looking digital products.",
                 "colour": "black",
                 "block": "Achieving pixel perfection means that the final output closely matches the original design",
                 "link": "#",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -53,11 +48,6 @@
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -83,11 +73,6 @@
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -96,9 +81,9 @@
             "h1": "",
             "h2": "",
             "h3": "",
-            "icon": "<span class='miniIcon material-symbols-rounded md-16 open whitet' id='clear-btn'>close</span>",
+            "icon": "",
             "boxlink": "blank",
-            "boxcontent": "<div id='search-bar-container><h2 class='blackt left'>Search</h2><input type='text' id='search-bar' placeholder='?'><ul id='search-options'></ul><div id='search-results'></div>",
+            "boxcontent": "<div id='search-bar-container><h2 class='blackt left'>Search</h2><span class='miniIcon material-symbols-rounded md-16 whitet' id='clear-btn'>close</span><input type='text' id='search-bar' placeholder='?'><ul id='search-options'></ul><div id='search-results'></div>",
             "boxtype": "display",
             "item": {
                 "heading": "",
@@ -113,11 +98,6 @@
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -143,11 +123,6 @@
                 "block": "",
                 "link": "#",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -173,11 +148,6 @@
                 "block": "I've always been a crafter",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -203,11 +173,6 @@
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -233,11 +198,6 @@
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -263,11 +223,6 @@
                 "block": "",
                 "link": "#",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -293,11 +248,6 @@
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -323,11 +273,6 @@
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -353,11 +298,6 @@
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -383,11 +323,6 @@
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -413,11 +348,6 @@
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -443,11 +373,6 @@
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -458,7 +383,7 @@
             "h3": "",
             "icon": "",
             "boxlink": "blank",
-            "boxcontent": "<a href='https://www.buymeacoffee.com/saslam1023' target='_blank'><img src='../images/giphy.gif' width='75' height='75' alt='Buy me a coffee'></a>",
+            "boxcontent": "<a href='https://www.buymeacoffee.com/saslam1023' target='_blank'><img src='images/giphy.gif' width='75' height='75' alt='Buy me a coffee'></a>",
             "boxtype": "display",
             "item": {
                 "heading": "",
@@ -473,11 +398,6 @@
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -491,23 +411,18 @@
             "boxcontent": "<span class='boxIcon span whitet md-64 fa-solid fa-splotch bounce'></i>",
             "boxtype": "content",
             "item": {
-                "heading": "",
-                "subheading": "",
+                "heading": "Creative Technologist",
+                "subheading": "What's that?",
                 "date": "",
                 "image": "",
                 "alt": "",
                 "figure": "hidden",
                 "caption": "",
-                "content": "",
+                "content": "<p><span>As a Creative Technologist</span>, my focus is on bridging the gap between technology and creativity. Picture me as the designer who's all about pixel perfection and making sure every detail sings. I dive into coding, web design, UX, and graphic arts, embracing a bit of everything to bring projects to life.</p><h3 class='md-32'>Competency</h3><p>In my toolkit, you'll find proficiency in programming, web development, user experience design, digital media production, and graphic design. These diverse competencies enable me to develop innovative solutions for creative projects that push boundaries and deliver impactful results.</p><h3 class='md-32'>Approach</h3><p>Beyond technical proficiency, my approach is rooted in the understanding of how technology can amplify artistic expression and solve complex challenges in the creative process. I serve as a conduit between traditional creative disciplines and emerging technologies, guiding the integration of new tools and methodologies to achieve compelling outcomes.</p><h3 class='md-32'>Passion</h3><p>Fuelled by a passion for pushing creative boundaries and a dedication to excellence, I endeavour to elevate each project I undertake, empowering teams to realise their vision and engage audiences in meaningful ways.</p>",
                 "colour": "blue",
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -533,11 +448,6 @@
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -563,11 +473,6 @@
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -588,16 +493,11 @@
                 "alt": "a cartoon bug on a blue background",
                 "figure": "visible",
                 "caption": "",
-                "content": "A game I designed using <a href='https://scratch.mit.edu/' target='_blank'>Scratch</a> for my CS50 project.",
+                "content": "<p><span>Bug Invasion</span>, a game I was tasked to design using <a href='https://scratch.mit.edu/' target='_blank'>Scratch</a>, a coding platform aimed at youngsters, for my first CS50 project.</p><p>The requirements for the game design:<ul><li>Use at least two sprites.</li><li>Have at least three scripts.</li><li>Use at least one conditional, at least one loop, and at least one variable.</li><li>Use at least one custom block, which must take at least one input.</li><li>Should be more complex than most of those demonstrated in the lecture</li></ul>",
                 "colour": "blue",
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -623,11 +523,6 @@
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -653,11 +548,6 @@
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -678,16 +568,11 @@
                 "alt": "",
                 "figure": "hidden",
                 "caption": "",
-                "content": "<p><span class=`bold`>Just the word 'Computer science'</span> fills me with dread as a creative right brainer but equally inspires a curiosity to the logical, analytical left brainer on the flip side. Visually I see scary numbers drifting off into infinity, complicated equations that look like they're strangling a hangman game, complex mathematics that suck you into a dark abyss. Nothing like the vibrant, aligned, creative designed world my head lives in.</p><p>And yet, these same numbers of 0's and 1's, these building blocks of... tbc  <h3>Discovery</h3><p>I discovered  CS50 through a blog post which highly recommended it, while researching programming languages. I had a look at the free Harvard course, which you can find <a href='https://www.edx.org/learn/computer-science/harvard-university-cs50-s-introduction-to-computer-science' target='_blank'>here on the EDX site</a> if you're interested in doing it too.</p><p>I had been looking into Python programming, and was impressed by the varied course content which featured a number of languages, including C, Python, SQL, and JavaScript as well as CSS and HTML, so I signed up.</p><h3>Scratchin'</h3><p>The course starts right from the beginning. 0's and 1's. It was easy to follow in the beginning, where we were introduced to Scratch (a free coding community for kids) and our first assignment was to make a game using Scratch.  It wasn't as straightforward as you'd think!  Some experimenting with the different 'parts' used to 'build' code was necessary. After some time, it was actually fun seeing it all come together and working. You can check out my Scratch game Bug Invasion here.</p><h3>Pushing through</h3><p>The following 3 lectures really tested my brain and patience and I found some parts of the course easier if they were visual but found I needed to work a lot harder with some of the technical ones. Haven't completed the course yet but fully intend too! <h3>Why?</h3><p>I took on this course because I wanted to learn about this tool (computers) that I've been using for the longest time. It's a bit like finally getting to really know a friend you've known forever but never actually knew anything about - because you never asked. It transpires you're discovering there is so much more to them and there is now another level to your relationship. There is the hope that having the knowledge of how this tech actually works, may help to understand, the why or how certain things happened (where the term debugging came from is a good one) and this in turn should help in the endeavours to create better programs, designs, and experiences.  ",
+                "content": "<p>Reading time: 5 - 7 minutes</p><p><span class=`bold`>The term 'Computer Science'</span> elicits a unique blend of dread and curiosity within me — a tug-of-war between the creative right-brain and the analytical left. On one hand, it conjures visions of daunting numbers cascading into infinity, equations so complex they resemble a hangman's noose, and mathematical intricacies that seem to swallow you whole. It's a stark departure from the vibrant, imaginative world my mind typically inhabits.</p><p>Yet, within these binary digits of 0's and 1's lie the very foundations of creation — a digital universe waiting to be explored, understood, and reshaped.</p><h3>Discovery</h3><p>My introduction to CS50 came through a compelling blog post that fervently recommended it during my exploration of programming languages. Intrigued, I delved into the free Harvard course available on the EDX platform, drawn in by its comprehensive curriculum spanning languages such as C, Python, SQL, JavaScript, CSS, and HTML.</p><h3>Scratching the Surface</h3><p>The journey commenced at ground zero: 0's and 1's. The initial stages were surprisingly accessible as we were introduced to Scratch — a coding platform designed for youngsters. Our maiden task? Crafting a game using Scratch. Yet, simplicity proved elusive; it demanded experimentation with its diverse coding components. However, witnessing the amalgamation of disparate elements into a functional whole proved gratifying. Feel free to experience my Scratch creation, Bug Invasion, here.</p><h3>Pushing Boundaries</h3><p>The subsequent lectures became a litmus test for my cognitive endurance. While visual concepts resonated effortlessly, technical nuances demanded tenacity. While my journey through the course remains ongoing, I am committed to surmounting its challenges.</p><h3>Purposeful Pursuit</h3><p>Embarking on this odyssey was driven by a profound desire to unravel the mysteries of the very tools—computers—that have been integral to my professional pursuits, leisure activities, and everyday life for as long as I can remember. It parallels the revelation of unraveling the layers of a longtime friend, unearthing hidden depths and fostering a newfound intimacy. Armed with insights into the inner workings of technology, one hopes to decipher the origins of enigmatic phenomena like debugging, thus refining the craft of programming, design, and user experience.</p><p>In my exploration of CS50, I've encountered a bridge between the realms of creativity and logic — a fusion of artistry and precision that speaks to the essence of modern innovation. It's a journey of self-discovery, an odyssey into the heart of technology, and an invitation to redefine the boundaries of what's possible.</p>",
                 "colour": "black",
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -713,11 +598,6 @@
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -743,11 +623,6 @@
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -768,16 +643,11 @@
                 "alt": "",
                 "figure": "hidden",
                 "caption": "",
-                "content": "<p><span>The design</span> of the Pixel Perfect site was inspired by many components, thoughts, and ideas, culminating into the vibrant design presented before you.</p><h3 class='md-32'>Colour</h3><p>The seven colour palette used on the site comes from a blend of digital and print inspired colours. My twist on rgb (red, green, blue) featuring a fushcia/magenta fusion, mellowed old school screen green, and perfect blue sky. Traditional print inspired black and white with a hint of luxury gold (you might see orange, its digital gold). And for the all important highlight and contrast effect its a buzz of yellow. </p><p>As a colour lover, creating a meaningful, vibrant, and accessible palette was at the heart of the sites design.</p><h3 class='md-32'>Shape</h3><p>Boxes. Bits. Bytes. Compartments. Representations. </p><h3 class='md-32'>Size</h3><p>Size is everything.</p>",
+                "content": "<p><span>The design</span> of the Pixel Perfect site was inspired by many components, thoughts, and ideas, culminating into the vibrant design presented before you.</p><h3 class='md-32'>Colour</h3><p>The seven colour palette used on the site comes from a blend of digital and print inspired colours. My twist on rgb (red, green, blue) featuring a fuchsia/magenta fusion, mellowed old school screen green, and perfect blue sky. Traditional print inspired black and white with a hint of luxury gold (you might see orange, its digital gold). And for the all important highlight and contrast effect its a buzz of yellow. </p><p>As a colour lover, creating a meaningful, vibrant, and accessible palette was at the heart of the sites design.</p><h3 class='md-32'>Shape</h3><p>Boxes. Bits. Bytes. Compartments. Representations. </p><h3 class='md-32'>Size</h3><p>Size is everything.</p>",
                 "colour": "green",
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -803,11 +673,6 @@
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -833,11 +698,6 @@
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -851,7 +711,7 @@
             "boxcontent": "<span class='boxIcon fa-solid fa-code spin whitet md-64' id='devices'></span>",
             "boxtype": "content",
             "item": {
-                "heading": "Software Development",
+                "heading": "Software Dev",
                 "subheading": "It's a mixed bag",
                 "date": "",
                 "image": "",
@@ -863,11 +723,6 @@
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -893,11 +748,6 @@
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -923,11 +773,6 @@
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -953,11 +798,6 @@
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -983,11 +823,6 @@
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -1013,11 +848,6 @@
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -1043,11 +873,6 @@
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -1073,11 +898,6 @@
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -1103,11 +923,6 @@
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         },
         {
@@ -1133,11 +948,6 @@
                 "block": "",
                 "link": "",
                 "status": "live"
-            },
-            "contact": {
-                "name": "Smeena",
-                "email": "",
-                "phone": ""
             }
         }
     ]
