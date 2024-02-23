@@ -712,3 +712,43 @@ h3 {
         grid-template-columns: repeat(auto-fit, 50%);
     }
 }
+
+/* Splash */
+
+.xwelcome {
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+    color: var(--white);
+    z-index: 100;
+}
+
+.welcome h1 {
+    font-size: 48px;
+}
+
+.welcome-box {
+    width: 150px;
+    aspect-ratio: 1;
+    color: var(--fuchsia)
+}
+
+h1 {
+    background-image: linear-gradient(45deg, var(--fuchsia), var(--fuchsia), var(--lightblue), var(--green), var(--gold), var(--white), var(--gold), var(--green), var(--lightblue), var(--fuchsia), var(--fuchsia), var(--fuchsia));
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: moveGradient 20s linear infinite;
+    background-size: 1000% 1000%;
+}
+
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 100%;
+    }
+
+    100% {
+        background-position: 100% 0%;
+    }
+}

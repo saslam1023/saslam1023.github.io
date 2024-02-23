@@ -120,6 +120,11 @@ function processData(data) {
             }
 
             // Append the item element to the container
+            /*  const interval = setInterval(function () {
+                  // Insert the box HTML into the gridContainer
+                  gridContainer.insertAdjacentHTML('beforeend', box);
+              }, 2000); // Adjust the delay as needed (in milliseconds)
+  */
             gridContainer.insertAdjacentHTML('beforeend', box);
         }
     });

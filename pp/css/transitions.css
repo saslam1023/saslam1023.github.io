@@ -1,0 +1,155 @@
+.slideInLeft {
+    animation: slideInLeft 0.5s ease forwards;
+}
+
+.slideInRight {
+    animation: slideInRight 0.5s ease forwards;
+}
+
+.slideInUp {
+    animation: slideInUp 0.5s ease forwards;
+}
+
+.slideInDown {
+    animation: slideInDown 0.5s ease forwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.pulse {
+    animation: pulse 2s ease infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(0.95);
+    }
+}
+
+
+.bounceIn {
+    animation: bounceIn 0.5s ease forwards;
+}
+
+@keyframes bounceIn {
+    from {
+        opacity: 0;
+        transform: translateY(-1000px) scaleY(2);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(30px) scaleY(0.9);
+    }
+
+    80% {
+        transform: translateY(-10px) scaleY(1.1);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scaleY(1);
+    }
+}
+
+.rotate {
+    animation: rotate 0.5s ease forwards;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: rotate(360deg);
+        opacity: 1;
+    }
+}
+
+.scaleIn {
+    animation: scaleIn 0.5s ease forwards;
+}
+
+.scaleOut {
+    animation: scaleOut 0.5s ease forwards;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleOut {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
