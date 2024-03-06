@@ -28,6 +28,7 @@ $(document).on("click", "h1, h2, .clickable", function () {
 
         $(".fullwidth.active").addClass("is-hidden").removeClass("active");
         $(".exit").removeClass("clickable").addClass("is-hidden");
+        $(".miniIcon").removeClass("is-hidden");
     }
 
 
@@ -39,8 +40,20 @@ $(document).on("click", "h1, h2, .clickable", function () {
         }).removeClass("is-hidden").addClass("active"); // activates the fullwidth box  
         $(boxId).addClass("expand active").removeClass("box inactive focusable"); // keep this  ADDS INITIAL
         $(".exit").addClass("clickable").removeClass("is-hidden");
+        $(".miniIcon").addClass("is-hidden");
 
     }
+
+
+    // Add a click event handler to links within the full-width container
+    $(".fullwidth active").on("click", "a", function () {
+        // Extract the color of the corresponding h2 text's li box
+        var color2 = $(this).closest(".fullwidth active").prev().find("h2").css("color");
+
+        // Apply the extracted color to the full-width container
+        $(".fullwidth active").css("background-color", color2);
+    });
+    console.log(color2)
 
 
     // Scroll to the top-left corner of the selected li element

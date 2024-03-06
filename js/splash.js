@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const container = document.getElementById('splash-container');
     const textcontainer = document.getElementById('pp-text-container');
@@ -6,6 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const numPixelsHeight = Math.ceil(window.innerHeight / 10); // Number of pixels vertically (rounded up)
     const numPixels = numPixelsWidth * numPixelsHeight;
     const colors = ['#dc14ad', 'black', '#14b4dc', '#f3a70e', '#67dc14', 'black', 'white']; // Remove white from colors
+
+
 
     // Create pixel elements and add them to the container
     for (let i = 0; i < numPixels; i++) {
@@ -32,8 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(function () {
             container.remove();
             document.querySelector('.pp-text-container').remove();
-            //container.style.display = 'none';
-            //document.querySelector('.pp-text-container').style.display = 'none';
         }, 4000); // Adjust duration of fade out animation
     }, 4000); // Adjust delay before hiding
 
@@ -44,10 +46,17 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(loadSecondScript, 4000);
         }
     });
-});
 
-function loadSecondScript() {
-    const script = document.createElement('script');
-    script.src = 'js/datax.js'; // Path to your second script file
-    document.body.appendChild(script);
-}
+    textcontainer.addEventListener('click', function () {
+        container.remove();
+        textcontainer.remove();
+        loadSecondScript();
+    });
+    function loadSecondScript() {
+        const script = document.createElement('script');
+        script.src = 'js/datax.js'; // Path to your second script file
+        document.body.appendChild(script);
+    }
+
+
+});

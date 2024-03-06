@@ -1012,7 +1012,7 @@ h3 {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    z-index: 2;
+    z-index: 5;
 }
 
 .pp-text {
@@ -1071,4 +1071,5 @@ h3 {
     cursor: pointer;
     text-decoration: underline;
     font-family: inherit;
+    font-size: inherit;
 }
