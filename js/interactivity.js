@@ -56,6 +56,7 @@ $(document).on("click", "h1, h2, .clickable", function () {
     console.log(color2)
 
 
+
     // Scroll to the top-left corner of the selected li element
     function scrollToTopLeft(selector) {
         var selectedElement = $(selector);
@@ -70,8 +71,9 @@ $(document).on("click", "h1, h2, .clickable", function () {
         }
     }
 
-    scrollToTopLeft($(this).closest("li"));
+    scrollToTopLeft($(this).closest(".expand"));
 });
+
 
 // Tabbing
 // Get all tabbed item elements

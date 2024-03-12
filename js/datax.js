@@ -180,7 +180,7 @@ function placeTheHolders() {
 
 function addPlaceholders(remainingItems) {
     const gridContainer = document.getElementById('grid');
-    const colors = ['pink', 'blue', 'green', 'gold', 'black', 'pink', 'white'];
+    const colors = ['pink', 'blue', 'green', 'gold', 'black', 'white'];
 
     for (let i = 0; i < remainingItems; i++) {
         const randomColor = colors[Math.floor(Math.random() * colors.length)];

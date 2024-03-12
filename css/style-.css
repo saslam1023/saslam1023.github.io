@@ -315,6 +315,11 @@ li.boxh2 {
     float: right;
 }
 
+span {
+    color: inherit;
+    /*filter: invert(1);*/
+}
+
 h1 span.highlight {
     color: #000;
     background: transparent;
@@ -397,7 +402,8 @@ ul[class] li>* {
     width: 100%;
     height: auto;
     overflow: hidden;
-    transition: height 1s ease-in-out, position 1s ease, opacity 2s ease;
+    animation: fadeSlideIn 2s;
+    /*transition: height 1s ease-in-out, position 1s ease, opacity 2s ease;*/
 
 }
 
@@ -581,6 +587,7 @@ h3 {
 
 .contentLayout h3 {
     background-color: var(--highlight-color);
+    font-size: 24px;
 }
 
 .square {
@@ -717,6 +724,8 @@ h3 {
     padding-top: 20px;
     height: auto;
     width: 100%;
+
+
 }
 
 .expand h1,
@@ -1075,4 +1084,37 @@ h3 {
     text-decoration: underline;
     font-family: inherit;
     font-size: inherit;
+}
+
+/* Form */
+.cform {
+    padding: 16px;
+}
+
+.cform input,
+.cform textarea {
+    width: 100%;
+    background-color: var(--transparent-gray-box-dark);
+    border: 0;
+    height: 50px;
+}
+
+.cformtextarea {
+    width: 100%
+}
+
+.cform button {
+    margin-top: 16px;
+    background-color: #67dc14;
+    height: 50px;
+    width: 100%;
+    border: 0px solid black;
+}
+
+.cform button:hover {
+    margin-top: 16px;
+    background-color: var(--highlight-color);
+    height: 50px;
+    width: 100%;
+    border: 0px solid black;
 }
