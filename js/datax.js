@@ -239,13 +239,13 @@ function addPlaceholders(remainingItems) {
             const searchText = searchBar.value.toLowerCase();
             searchResults.innerHTML = '';
 
-            if (searchText.length <= 1) {
+            if (searchText.length <= 0) {
                 hideOptions();
                 clearHighlight();
                 return;
             }
 
-            const headings = document.querySelectorAll('h1, h2, h3');
+            const headings = document.querySelectorAll('.box h1, .box h2');
             const matches = [];
 
             headings.forEach((heading, index) => {
@@ -287,7 +287,7 @@ function addPlaceholders(remainingItems) {
             searchOptions.innerHTML = '';
             matches.forEach(match => {
                 const li = document.createElement('li');
-                li.textContent = document.querySelectorAll('h1, h2, h3, .clickable')[match.index].textContent;
+                li.textContent = document.querySelectorAll('.box h1, .box h2')[match.index].textContent;
                 li.dataset.index = match.index;
                 searchOptions.appendChild(li);
             });
@@ -302,14 +302,14 @@ function addPlaceholders(remainingItems) {
         }
 
         function clearHighlight() {
-            const headings = document.querySelectorAll('h1, h2, h3, .clickable');
+            const headings = document.querySelectorAll('.box h1, .box h2');
             headings.forEach(heading => {
                 heading.innerHTML = heading.innerText;
             });
         }
 
         function scrollToElement(index) {
-            const targetElement = document.querySelectorAll('h1, h2, h3, .clickable')[index];
+            const targetElement = document.querySelectorAll('.box h1, .box h2')[index];
             targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
             clearHighlight();
             // Highlight the matched text
@@ -317,24 +317,25 @@ function addPlaceholders(remainingItems) {
         }
 
         function highlightMatches(matches) {
-            const headings = document.querySelectorAll('h1, h2, h3, .clickable');
+            const headings = document.querySelectorAll('.box h1, .box h2');
             headings.forEach((heading, index) => {
-                const headingText = heading.innerText;
-                let highlightedText = '';
+                const headingText = heading.innerHTML;
+                let highlightedText = headingText;
 
                 matches.forEach(match => {
                     if (match.index === index) {
                         const start = match.start;
                         const end = match.end;
-                        highlightedText += `${headingText.substring(0, start)}<span class="highlight">${headingText.substring(start, end)}</span>${headingText.substring(end)}`;
-                    } else {
-                        highlightedText = headingText;
+                        highlightedText = highlightedText.substring(0, start) +
+                            `<span class="highlight">${highlightedText.substring(start, end)}</span>` +
+                            highlightedText.substring(end);
                     }
                 });
 
                 heading.innerHTML = highlightedText;
             });
         }
+
 
 
 
@@ -349,7 +350,7 @@ function addPlaceholders(remainingItems) {
                 // Check if the item with the same index has already been added
                 if (!addedIndexes.includes(index)) {
                     const li = document.createElement('li');
-                    li.textContent = document.querySelectorAll('h1, h2, h3, .clickable')[index].textContent;
+                    li.textContent = document.querySelectorAll('.box h1, .box h2')[index].textContent;
                     li.dataset.index = index;
                     searchOptions.appendChild(li);
 

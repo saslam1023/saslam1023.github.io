@@ -292,7 +292,7 @@ li.boxh2 {
 
 }
 
-#search-options li {
+#search-options>li {
     padding: 0px 8px;
     cursor: pointer;
     text-align: left;
@@ -315,17 +315,20 @@ li.boxh2 {
     float: right;
 }
 
-.highlight {
-    background-color: var(--highlight-color);
+h1 span.highlight {
     color: #000;
+    background: transparent;
+    border-bottom: 1px solid yellow;
+    font: inherit;
     /* Set text color for readability */
 }
 
-#search-options>li {
-    list-style: none;
-    border: 0px solid rgb(0, 183, 255);
-    transition: height 3s ease-in-out;
+.highlight {
+    color: #000;
+    background-color: var(--highlight-color);
+    /* Set text color for readability */
 }
+
 
 
 /* Grid */
