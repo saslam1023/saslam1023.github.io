@@ -35,7 +35,11 @@ document.addEventListener("DOMContentLoaded", function () {
         container.classList.add('ppfadeOut');
         setTimeout(function () {
             container.remove();
-            document.querySelector('.pp-text-container').remove();
+            let textContainer = document.querySelector('.pp-text-container');
+            if (textContainer) {
+                textContainer.remove();
+            }
+            //    document.querySelector('.pp-text-container').remove();
         }, 4000); // Adjust duration of fade out animation
     }, 4000); // Adjust delay before hiding
 

@@ -403,6 +403,7 @@ ul[class] li>* {
     height: auto;
     overflow: hidden;
     animation: fadeSlideIn 2s;
+    background-color: yellow;
     /*transition: height 1s ease-in-out, position 1s ease, opacity 2s ease;*/
 
 }
@@ -627,6 +628,15 @@ h3 {
     grid-gap: 30px;
     width: 80%;
     margin: 0 auto;
+}
+
+li.fullwidth.active {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 30px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: inherit;
 }
 
 .wide-item {
