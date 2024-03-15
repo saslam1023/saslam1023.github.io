@@ -865,13 +865,6 @@ h3 {
         grid-template-columns: repeat(auto-fit, 50%);
     }
 
-    .content-grid-container {
-        grid-template-columns: auto 1fr auto;
-        grid-template-rows: auto auto auto;
-        grid-gap: 30px;
-        width: 90%;
-        margin: 0 auto;
-    }
 
     .square-item {
         grid-column: 1 / 4;

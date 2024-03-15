@@ -108,25 +108,25 @@
             "id": 5,
             "category": "Fixed",
             "h1": "",
-            "h2": "",
+            "h2": "Projects",
             "h3": "",
             "icon": "",
-            "boxlink": "",
-            "boxcontent": "empty",
-            "boxtype": "display",
+            "boxlink": "blank",
+            "boxcontent": "<span class='boxIcon blackt md-64 fa-solid fa-cubes-stacked'></span>",
+            "boxtype": "content",
             "item": {
-                "heading": "",
-                "subheading": "",
+                "heading": "Projects",
+                "subheading": "Inspire, experiment, and grow",
                 "date": "",
                 "image": "",
                 "alt": "",
                 "figureStatus": "hidden",
                 "figure": "hidden",
                 "caption": "",
-                "content": "",
+                "content": "<p><span>Pixel Perfect</span> offers a vibrant showcase of Smeena's ongoing creative endeavors. It's a bustling hub where where the creative process is in a perpetual state of evolution.</p><p>Here, you'll find an eclectic mix of projects, each meticulously crafted and thoughtfully curated. There's a diverse array of creations awaiting your exploration.</p><p>Each project tells a story — a tale of inspiration, experimentation, and growth. It's a journey of discovery, where ideas evolve and flourish into tangible digital experiences.</p><p>So dive in and immerse yourself in Pixel Perfect's Projects. It's not just a portfolio; it's a vibrant canvas of creativity and innovation. And as you navigate through these creations, discover new perspectives and endless possibilities in the world of digital design.</p><ul><li>Project one</li><li>Project two</li><li>Project three</li></ul>",
                 "colour": "pink",
                 "block": "",
-                "link": "#",
+                "link": "",
                 "status": "live"
             }
         },
@@ -931,7 +931,7 @@
                 "colour": "gold",
                 "block": "",
                 "link": "",
-                "status": "live"
+                "status": "pending"
             }
         },
         {
@@ -957,7 +957,33 @@
                 "colour": "black",
                 "block": "",
                 "link": "",
-                "status": "live"
+                "status": "pending"
+            }
+        },
+        {
+            "id": 38,
+            "category": "End",
+            "h1": "",
+            "h2": "test",
+            "h3": "",
+            "icon": "",
+            "boxlink": "blank",
+            "boxcontent": "empty",
+            "boxtype": "display",
+            "item": {
+                "heading": "",
+                "subheading": "",
+                "date": "",
+                "image": "",
+                "alt": "",
+                "figureStatus": "hidden",
+                "figure": "hidden",
+                "caption": "",
+                "content": "",
+                "colour": "green",
+                "block": "",
+                "link": "",
+                "status": "pending"
             }
         }
     ]

@@ -173,7 +173,7 @@ function placeTheHolders() {
 
     const remainingItems = targetItemCount - (currentItemCount % targetItemCount);
 
-    if (remainingItems > 0) {
+    if (remainingItems < 8) {
         addPlaceholders(remainingItems);
     }
 }
