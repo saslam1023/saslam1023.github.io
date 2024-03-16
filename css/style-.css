@@ -875,6 +875,11 @@ li.fullwidth.active {
         grid-template-columns: repeat(auto-fit, 50%);
     }
 
+    .contentLayout,
+    .content-grid-container {
+        width: 100vw;
+        background-color: white;
+    }
 
     .square-item {
         grid-column: 1 / 4;
