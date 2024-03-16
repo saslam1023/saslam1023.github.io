@@ -875,20 +875,24 @@ li.fullwidth.active {
         grid-template-columns: repeat(auto-fit, 50%);
     }
 
-    .contentLayout,
+    .contentLayout {
+        background-color: black;
+        width: 100%;
+        margin: 0;
+    }
+
     .content-grid-container {
-        width: 100vw;
+
         background-color: white;
+        margin: 0 auto;
+        width: 90%;
     }
 
     .square-item {
         grid-column: 1 / 4;
-        grid-row: span 1;
-        min-width: 150px;
-        width: 100%;
+        width: 90%;
         height: auto;
         max-height: 100px;
-        max-width: 91%;
         padding: 20px;
     }
 
@@ -904,7 +908,6 @@ li.fullwidth.active {
     .media-item,
     .media-item img {
         grid-column: 1 / 4;
-        grid-row: auto;
         width: 100%;
         aspect-ratio: 0;
     }
