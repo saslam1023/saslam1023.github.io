@@ -1103,3 +1103,33 @@ li.fullwidth.active {
     width: 100%;
     border: 0px solid black;
 }
+
+/* Cookie consent */
+
+.cc-nb-main-container {
+    position: fixed;
+    bottom: 0;
+    font-size: 11px;
+
+}
+
+.termsfeed-com---nb .cc-nb-text {
+    font-size: 11px;
+}
+
+.termsfeed-com---nb .cc-nb-title {
+    font-size: 16px;
+    margin: 0;
+}
+
+.open_preferences_center {
+    position: fixed;
+    bottom: 0;
+}
+
+.fa-cookie-bite {
+    padding-top: 8px;
+}
+
+/*
+"><div class="cc-nb-title-container"><p class="cc-nb-title" id="cc-nb-title">We use cookies</p></div><div class="cc-nb-text-container"><p class="cc-nb-text" id="cc-nb-text">We use cookies and other tracking technologies to improve your browsing experience on our website, to show you personalized content and targeted ads, to analyze our website traffic, and to understand where our visitors are coming from.</p></div><div class="cc-nb-buttons-container"><button class="cc-nb-okagree" role="button">OK</button><button class="cc-nb-changep" role="button">Change my preferences</button></div></div>*/
