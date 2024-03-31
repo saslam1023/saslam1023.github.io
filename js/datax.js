@@ -54,7 +54,7 @@ function createBoxHTML(item) {
         // then if h1 is not empty
         if (h1 !== "") {
             // h1 text boxes - display
-            boxHTML = `<li class='box illuminate focusable ${item.item.colour} inactive ${randomTransition}' id='box-${item.id}' tabindex='${item.id}'>
+            boxHTML = `<li class='box illuminate focusable ${item.item.colour} inactive  ${randomTransition}' id='box-${item.id}' tabindex='${item.id}'>
                 <h1 class='clickable brand searchable' data-link='#box-${item.id}' data-target='#quickview-${item.id}'>${h1}</h1>
                 ${boxcontent}
                 <span class='exit material-symbols-rounded md-16 whitet'>close</span>
@@ -95,7 +95,7 @@ function createBoxHTML(item) {
         }
         // h2 boxes and has content and h2 is not empty OR boxcontent is not equal to 'empty' then display boxes
         else if (h2 !== "" || boxcontent !== "empty") {
-            boxHTML = `<li class='box illuminate focusable ${item.item.colour} inactive ${randomTransition}' id='box-${item.id}' tabindex='${item.id}'>
+            boxHTML = `<li class='box illuminate focusable ${item.item.colour} inactive  ${randomTransition}' id='box-${item.id}' tabindex='${item.id}'>
                             <div class='icon-clr'>
                                 <a href='${item.boxlink}' target='_blank'>${item.icon}</a>
                             </div>
