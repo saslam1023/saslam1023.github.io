@@ -1,3 +1,5 @@
+
+
 async function loadData() {
     try {
         const response = await fetch('json/data.json');
@@ -11,10 +13,13 @@ async function loadData() {
         await loadBoxesWithDelay(data); // Load boxes with delay
         setTimeout(placeTheHolders, 0); // Placeholders loaded after a delay
 
+
+
     } catch (error) {
         console.error('Fetch error:', error);
     }
 }
+
 
 async function loadBoxesWithDelay(data) {
     const gridContainer = document.getElementById('grid');
@@ -50,7 +55,7 @@ function createBoxHTML(item) {
         if (h1 !== "") {
             // h1 text boxes - display
             boxHTML = `<li class='box illuminate focusable ${item.item.colour} inactive ${randomTransition}' id='box-${item.id}' tabindex='${item.id}'>
-                <h1 class='clickable brand' data-link='#box-${item.id}' data-target='#quickview-${item.id}'>${h1}</h1>
+                <h1 class='clickable brand searchable' data-link='#box-${item.id}' data-target='#quickview-${item.id}'>${h1}</h1>
                 ${boxcontent}
                 <span class='exit material-symbols-rounded md-16 whitet'>close</span>
             </li>
@@ -94,7 +99,7 @@ function createBoxHTML(item) {
                             <div class='icon-clr'>
                                 <a href='${item.boxlink}' target='_blank'>${item.icon}</a>
                             </div>
-                            <h2 class='clickable' data-link='#box-${item.id}' data-target='#quickview-${item.id}'>${item.h2}</h2>
+                            <h2 class='clickable searchable' data-link='#box-${item.id}' data-target='#quickview-${item.id}'>${item.h2}</h2>
                             ${item.boxcontent}
                             <span class='exit is-hidden md-16 whitet'>exit</span>
                         </li>
@@ -127,7 +132,7 @@ function createBoxHTML(item) {
             <div class='icon-clr'>
             <a href='${item.boxlink}' target='_blank'>${item.icon}</a>
             </div>
-            <h2 class='clickable' data-link='#box-${item.id}' data-target='#quickview-${item.id}'>${item.h2}</h2>
+            <h2 class='clickable searchable' data-link='#box-${item.id}' data-target='#quickview-${item.id}'>${item.h2}</h2>
             ${item.boxcontent}</li >
                 <li class='fullwidth is-hidden' id='quickview-${item.id}'>
                 <div class='contentLayout'>
@@ -176,9 +181,14 @@ function placeTheHolders() {
     if (remainingItems < 8) {
         addPlaceholders(remainingItems);
     }
+    else {
+        loadSearchScript();
+
+    }
 }
 
 function addPlaceholders(remainingItems) {
+    console.log("add placeholder atived")
     const gridContainer = document.getElementById('grid');
     const colors = ['pink', 'blue', 'green', 'gold', 'black', 'white'];
 
@@ -188,6 +198,7 @@ function addPlaceholders(remainingItems) {
         placeholderLi.classList.add('box', 'illuminate', 'boxshadow', randomColor);
         placeholderLi.textContent = '';
         gridContainer.append(placeholderLi);
+        console.log("appeneded")
     }
 
 
@@ -195,176 +206,24 @@ function addPlaceholders(remainingItems) {
     // Run the search function only if placeholders have been loaded
     placeholdersLoaded = true;        // Run the search function only if placeholders have been loaded
     if (placeholdersLoaded) {
-        initializeSearch();
+        loadSearchScript();
+
     }
-
-
-
-    // Search
-
-    function initializeSearch() {
-        const searchBar = document.getElementById('search-bar');
-        const searchOptions = document.getElementById('search-options');
-        const searchResults = document.getElementById('search-results');
-        const clearBtn = document.getElementById('clear-btn');
-        let searchTimeout;
-
-        searchBar.addEventListener('input', function () {
-            clearTimeout(searchTimeout);
-            searchTimeout = setTimeout(search, 500); // Adjust the delay as needed (in milliseconds)
-        });
-
-        searchOptions.addEventListener('click', function (event) {
-            if (event.target.tagName === 'LI') {
-                searchBar.value = event.target.textContent;
-                scrollToElement(event.target.dataset.index);
-            }
-        });
-
-        searchBar.addEventListener('keydown', function (event) {
-            if (event.key === 'Enter') {
-                event.preventDefault(); // Prevent the default form submission
-                search();
-            }
-        });
-
-        clearBtn.addEventListener('click', function () {
-            searchBar.value = '';
-            searchResults.innerHTML = '';
-            hideOptions();
-            clearHighlight();
-        });
-        // here
-        function search() {
-            const searchText = searchBar.value.toLowerCase();
-            searchResults.innerHTML = '';
-
-            if (searchText.length <= 0) {
-                hideOptions();
-                clearHighlight();
-                return;
-            }
-
-            const headings = document.querySelectorAll('.box h1, .box h2');
-            const matches = [];
-
-            headings.forEach((heading, index) => {
-                const headingText = heading.innerText.toLowerCase();
-                const headingIndex = headingText.indexOf(searchText);
-
-                // Check if the heading is within an li with class 'box' - add ! if want to invert search to hidden content in fullwidth containers.
-                if (isInsideBoxList(heading)) {
-                    if (headingIndex !== -1) {
-                        matches.push({
-                            index: index,
-                            start: headingIndex,
-                            end: headingIndex + searchText.length
-                        });
-                    }
-                }
-            });
-
-            displayResults(matches);
-        }
-        //
-        // Helper function to check if an element is inside an li with class 'box'
-        function isInsideBoxList(element) {
-            const closestLi = element.closest('li.box');
-            return closestLi !== null && closestLi.classList.contains('box');
-        }
-
-        // there
-        function displayResults(matches) {
-            if (matches.length > 0) {
-                showOptions(matches);
-                scrollToElement(matches[0].index);
-            } else {
-                hideOptions();
-            }
-        }
-
-        function showOptions(matches) {
-            searchOptions.innerHTML = '';
-            matches.forEach(match => {
-                const li = document.createElement('li');
-                li.textContent = document.querySelectorAll('.box h1, .box h2')[match.index].textContent;
-                li.dataset.index = match.index;
-                searchOptions.appendChild(li);
-            });
-            searchOptions.style.display = 'block';
-            highlightMatches(matches);
-        }
-
-        function hideOptions() {
-            searchOptions.innerHTML = '';
-            searchOptions.style.display = 'none';
-            clearHighlight();
-        }
-
-        function clearHighlight() {
-            const headings = document.querySelectorAll('.box h1, .box h2');
-            headings.forEach(heading => {
-                heading.innerHTML = heading.innerText;
-            });
-        }
-
-        function scrollToElement(index) {
-            const targetElement = document.querySelectorAll('.box h1, .box h2')[index];
-            targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            clearHighlight();
-            // Highlight the matched text
-            targetElement.innerHTML = targetElement.innerText.replace(new RegExp(searchBar.value, 'gi'), (match) => `<span class="highlight">${match}</span>`);
-        }
-
-        function highlightMatches(matches) {
-            const headings = document.querySelectorAll('.box h1, .box h2');
-            headings.forEach((heading, index) => {
-                const headingText = heading.innerHTML;
-                let highlightedText = headingText;
-
-                matches.forEach(match => {
-                    if (match.index === index) {
-                        const start = match.start;
-                        const end = match.end;
-                        highlightedText = highlightedText.substring(0, start) +
-                            `<span class="highlight">${highlightedText.substring(start, end)}</span>` +
-                            highlightedText.substring(end);
-                    }
-                });
-
-                heading.innerHTML = highlightedText;
-            });
-        }
-
-
-
-
-        function showOptions(matches) {
-            searchOptions.innerHTML = '';
-
-            const addedIndexes = []; // Track added indexes
-
-            matches.forEach(match => {
-                const index = match.index;
-
-                // Check if the item with the same index has already been added
-                if (!addedIndexes.includes(index)) {
-                    const li = document.createElement('li');
-                    li.textContent = document.querySelectorAll('.box h1, .box h2')[index].textContent;
-                    li.dataset.index = index;
-                    searchOptions.appendChild(li);
-
-                    addedIndexes.push(index); // Add the index to the addedIndexes array
-                }
-            });
-
-            searchOptions.style.display = 'block';
-            highlightMatches(matches);
-        }
-    }
-
-
 
 }
+// Call loadData function after the DOM content is loaded
 
 loadData();
+
+
+
+
+function loadSearchScript() {
+    const script = document.createElement('script');
+
+    script.src = 'js/search.js'; // Path to your second script file
+    document.body.appendChild(script);
+}
+
+
+
