@@ -74,31 +74,13 @@ $(document).on("click", "li.box", function () {
     });
 
 
-
-
-
-    // Scroll to the top-left corner of the selected li element
-    function scrollToTopLeft(selector) {
-        let selectedElement = $(selector);
-
-        if (selectedElement.length > 0) {
-            let offset = selectedElement.offset();
-
-            $('html, body').animate({
-                scrollTop: offset.top,
-                scrollLeft: offset.left
-            }, 'slow');
-        }
-    }
-
-    scrollToTopLeft($(this).parent("li"));
+    scrollToTopLeft($(this));
 });
 
 
 
 
-
-// Click function
+// Click INLINK function
 $(document).on("click", ".inlink", function () {
 
     const targetId = $(this).data("target");
@@ -136,7 +118,7 @@ $(document).on("click", ".inlink", function () {
         $(boxId).addClass("expand active").removeClass("box inactive focusable"); // keep this  ADDS INITIAL
         $(".exit").addClass("clickable").removeClass("is-hidden");
         $(".miniIcon").addClass("is-hidden");
-        scrollToTopLeft()
+
 
     }
 
@@ -162,19 +144,24 @@ $(document).on("click", ".inlink", function () {
 
 
 
-    // Scroll to the top-left corner of the selected li element
-    function scrollToTopLeft(selector) {
-        let selectedElement = $(selector);
+    //    scrollToTopLeft($(this));
 
-        if (selectedElement.length > 0) {
-            let offset = selectedElement.offset();
-
-            $('html, body').animate({
-                scrollTop: offset.top,
-                scrollLeft: offset.left
-            }, 'slow');
-        }
-    }
-
-    scrollToTopLeft($(this).parent("li"));
+    scrollToTopLeft($(".expand.active"));
 });
+
+
+
+
+// Scroll to the top-left corner of the selected li element
+function scrollToTopLeft(selector) {
+    let selectedElement = $(selector);
+
+    if (selectedElement.length > 0) {
+        let offset = selectedElement.offset();
+
+        $('html, body').animate({
+            scrollTop: offset.top,
+            scrollLeft: offset.left
+        }, 'slow');
+    }
+}
