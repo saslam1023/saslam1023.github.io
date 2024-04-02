@@ -60,8 +60,8 @@
             "h3": "",
             "icon": "<span class=' miniIcon open blackt md-16 material-icons-round'>open_in_new</span>",
             "boxlink": "https://www.cookiesandyou.com/",
-            "boxcontent": "<span class='black'>This site</span><span class='blue'> uses</span><span class='pink'> cookies</span><span class='fa-solid fa-cookie-bite md-32'></span>",
-            "boxtype": "display",
+            "boxcontent": "<a href='https://www.cookiesandyou.com/' target='_blank'><span class='black'>This site</span><br><span class='blue'> uses</span><br><span class='pink'> cookies</span><br><span class='fa-solid fa-cookie-bite md-32'></span></a>",
+            "boxtype": "link",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -85,8 +85,8 @@
             "h2": "",
             "h3": "",
             "icon": "",
-            "boxlink": "blank",
-            "boxcontent": "<div id='search-bar-container><h2 class='blackt left'>Search</h2><span class='miniIcon material-symbols-rounded md-16 whitet' id='clear-btn'>close</span><input type='text' id='search-bar' placeholder='?'><ul id='search-options'></ul><div id='search-results'></div>",
+            "boxlink": "",
+            "boxcontent": "<span class='miniIcon material-symbols-rounded md-16 whitet' id='clear-btn'>close</span><div id='search-bar-container'><h2 class='whitet center'>Search</h2><input type='text' id='search-bar' placeholder='?'><ul id='search-options'></ul><div id='search-results'></div>",
             "boxtype": "display",
             "item": {
                 "heading": "",
@@ -200,7 +200,7 @@
                 "figureStatus": "hidden",
                 "figure": "hidden",
                 "caption": "",
-                "content": "<p><span>Let's connect.</span><br>Whether you're interested in learning more about Pixel Perfect or Smeena, or you want to collaborate, drop a line using one of the available options.<br>Send a 'Connect' request via <a href='https://www.linkedin.com/in/smeena-aslam/' target='_blank'>LinkedIn</a> or contact direct using the form below.</p><p><div class='cform'><form id='contactForm' method='POST' action='https://slammin-design.co.uk/connect.php'><div class='messages'></div><div><label for='name'>Your Name:</label><br><input type='text' id='name' name='name' required><br><span id='nameError' class='error'></span></div><div><label for='email'>Your Email:</label><br><input type='email' id='email' name='email' required><br><span id='emailError' class='error'></span></div><div><label for='message'>Message:</label><br><textarea class='cformtextarea' id='message' name='message' required></textarea><br><span id='messageError' class='error'></span></div><button type='submit'>Submit</button></form></div></p>",
+                "content": "<p><span>Let's connect.</span><br>Whether you're interested in learning more about Pixel Perfect or Smeena, or you want to collaborate, drop a line using one of the available options.<p>Send a 'Connect' request via <a href='https://www.linkedin.com/in/smeena-aslam/' target='_blank'>LinkedIn</a> or contact direct using the form below.</p><p><div class='cform'><form id='contactForm' method='POST' action='https://slammin-design.co.uk/connect.php'><div class='messages'></div><div><label for='name'>Your Name:</label><br><input type='text' id='name' name='name' required><br><span id='nameError' class='error'></span></div><div><label for='email'>Your Email:</label><br><input type='email' id='email' name='email' required><br><span id='emailError' class='error'></span></div><div><label for='message'>Message:</label><br><textarea class='cformtextarea' id='message' name='message' required></textarea><br><span id='messageError' class='error'></span></div><button type='submit'>Submit</button></form></div></p>",
                 "colour": "green",
                 "block": "",
                 "link": "",
@@ -211,7 +211,7 @@
             "id": 9,
             "category": "Fixed",
             "h1": "",
-            "h2": "<span class='pink'>Watch</span><br><span class='blue'>Site</span><br><span class='black whitet'>Intro</span>",
+            "h2": "<a href='https://saslam1023.github.io/' target='_blank'><span class='pink'>Watch</span><br><span class='blue'>Site</span><br><span class='black whitet'>Intro</span></a>",
             "h3": "",
             "icon": "",
             "boxlink": "https://saslam1023.github.io/",
@@ -319,8 +319,8 @@
             "h3": "",
             "icon": "<span class=' miniIcon open blackt md-16 material-icons-round'>open_in_new</span>",
             "boxlink": "https://saslam1023.github.io/calculator",
-            "boxcontent": "<span class='boxIcon blackt md-64 fa-solid fa-calculator'></span>",
-            "boxtype": "display",
+            "boxcontent": "<a href='https://saslam1023.github.io/calculator' target='_blank'><span class='boxIcon blackt md-64 fa-solid fa-calculator'></span></a>",
+            "boxtype": "link",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -371,8 +371,8 @@
             "h3": "",
             "icon": "<span class=' miniIcon open whitet md-16 material-icons-round'>open_in_new</span>",
             "boxlink": "https://saslam1023.github.io/filmflix",
-            "boxcontent": "<span class='boxIcon whitet md-48 fas fa-film'></span>",
-            "boxtype": "display",
+            "boxcontent": "<a href='https://saslam1023.github.io/filmflix' target='_blank'><span class='boxIcon whitet md-48 fas fa-film'></span></a>",
+            "boxtype": "link",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -398,7 +398,7 @@
             "icon": "<span class=' miniIcon open blackt md-16 material-icons-round'>open_in_new</span>",
             "boxlink": "https://github.com/saslam1023/",
             "boxcontent": "<a href='https://github.com/saslam1023/' target='_blank'><svg height='64' aria-hidden='true' viewBox='0 0 16 16' version='1.1' width='64' data-view-component='true' class='boxIcon octicon octicon-mark-github v-align-middle color-fg-default'><path d='M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'></path></svg></a>",
-            "boxtype": "display",
+            "boxtype": "link",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -424,7 +424,7 @@
             "icon": "<span class=' miniIcon open blackt md-16 material-icons-round'>open_in_new</span>",
             "boxlink": "https://www.buymeacoffee.com/saslam1023",
             "boxcontent": "<a href='https://www.buymeacoffee.com/saslam1023' target='_blank'><img src='images/giphy.gif' width='75' height='75' alt='Buy me a coffee'></a>",
-            "boxtype": "display",
+            "boxtype": "link",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -501,8 +501,8 @@
             "h3": "",
             "icon": "<span class=' miniIcon open blackt md-16 material-icons-round'>open_in_new</span>",
             "boxlink": "https://slammin-design.co.uk/designer/smeena/",
-            "boxcontent": "<span class='fa-solid fa-swatchbook md-64'></span>",
-            "boxtype": "display",
+            "boxcontent": "<a href='https://slammin-design.co.uk/designer/smeena/' target='_blank'><span class='fa-solid fa-swatchbook md-64'></span></a>",
+            "boxtype": "link",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -552,8 +552,8 @@
             "h3": "",
             "icon": "<span class=' miniIcon open blackt md-16 material-icons-round'>open_in_new</span>",
             "boxlink": "https://saslam1023.github.io/20questions",
-            "boxcontent": "<span class='boxIcon blackt md-48 fa-solid fa-question'></span>",
-            "boxtype": "display",
+            "boxcontent": "<a href='https://saslam1023.github.io/20questions' target='_blank'><span class='boxIcon blackt md-48 fa-solid fa-question'></span></a>",
+            "boxtype": "link",
             "item": {
                 "heading": "",
                 "subheading": "",
@@ -738,18 +738,18 @@
             "boxtype": "content",
             "item": {
                 "heading": "Software Dev",
-                "subheading": "It's a mixed bag",
+                "subheading": "The Bootcamp Experience",
                 "date": "",
                 "image": "",
                 "alt": "",
                 "figureStatus": "hidden",
                 "figure": "hidden",
                 "caption": "",
-                "content": "",
-                "colour": "pink",
+                "content": "<p><span>Restarting</span> a career in Tech, after previously working as a New Media Designer for a marketing agency back in the early Noughties, necessitated upskilling and adapting to meet the demands of newer technologies and roles within the industry.</p><p>While a background in New Media Design, along with subsequent roles as a Graphic/Web Designer/Developer, provided a robust foundation in digital creativity and communication, the imperative to broaden skills and stay abreast of the latest technologies was recognised. This involved investing time in learning new software, exploring emerging trends, and enrolling in an intensive 12-week Software Development Bootcamp.</p><h3>Bootcamp Journey</h3><p>For 3.5 hours a day over 12 weeks, immersion in the world of Software Development occurred alongside approximately 20 other like-minded aspiring software developers.</p><p>The journey commenced with essential tools like VSCode, a significant upgrade from SublimeText. Trainers began with the fundamentals: HTML, Git, and GitHub, swiftly progressing to CSS, and Bootstrap.</p><h3>Intensive Learning</h3><p>The curriculum delved into JavaScript, offering deeper insights beyond prior experience with jQuery and AJAX. Projects like building a Calculator and a trivia quiz named 20 Questions pushed boundaries in both backend and frontend development.</p><p>Next, the focus shifted to backend programming, particularly Databases. Starting with MySQL and traversing through MongoDB, this segment was particularly intriguing. Delving into Python programming culminated in creating a CRUD system using SQLite and Replit, and ultimately developing FilmFlix, a Python CRUD project using Flask.</p><h3>Challenges and Growth</h3><p>Throughout the Bootcamp, regular quizzes tested knowledge, and collaboration opportunities fostered a supportive learning environment. While most assignments were individual, some encouraged teamwork, fostering camaraderie within the cohort.</p><h3>Conclusion</h3><p>By proactively enhancing skills and knowledge, seeking exciting opportunities within the tech sector became the goal. Connect today to discover how one can contribute to your business or project.</p>",
+                "colour": "green",
                 "block": "",
                 "link": "",
-                "status": "pending"
+                "status": "live"
             }
         },
         {
@@ -801,7 +801,7 @@
                 "colour": "green",
                 "block": "",
                 "link": "",
-                "status": "live"
+                "status": "pending"
             }
         },
         {
@@ -839,7 +839,7 @@
             "icon": "<span class=' miniIcon open blackt md-16 material-icons-round'>open_in_new</span>",
             "boxlink": "https://www.linkedin.com/in/smeena-aslam/' target='_blank'",
             "boxcontent": "<a href='https://www.linkedin.com/in/smeena-aslam/' target='_blank'><span class='boxIcon whitet md-64 fa-brands fa-linkedin'></span></a>",
-            "boxtype": "display",
+            "boxtype": "link",
             "item": {
                 "heading": "",
                 "subheading": "",
