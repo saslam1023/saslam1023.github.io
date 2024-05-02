@@ -81,7 +81,7 @@ function createBoxHTML(item) {
                             </div>
                         </li>`;
         }
-        // Display boxes no link
+        // Display boxes with no link
         else if (boxtype === "display" && boxcontent !== "empty") {
             boxHTML = `<li class='box illuminate focusable ${item.item.colour} ${randomTransition}' id='box-${item.id}' tabindex='${item.id}'>
                             <div class='icon-clr'>
@@ -93,19 +93,19 @@ function createBoxHTML(item) {
                         </li>
                         `;
         }
-        // Display boxes link
+        // Display boxes with link
         else if (boxtype === "link") {
             boxHTML = `<li class='box illuminate focusable ${item.item.colour} inactive ${randomTransition}' id='box-${item.id}' tabindex='${item.id}'>
                                     <a href='${item.boxlink}' target='_blank'><div class='icon-clr'>
                                         ${item.icon}</div>
-                                    <h2><a href='${item.boxlink}' target='_blank'>${h2}</a></h2>
+                                    <h2 class='clickable searchable'><a href='${item.boxlink}' target='_blank'>${h2}</a></h2>
                                     ${boxcontent}
                                     <span class='exit material-symbols-rounded md-16 whitet'>close</span></a>
                                 </li>`;
 
         }
 
-        // h2 boxes and has content and h2 is not empty OR boxcontent is not equal to 'empty' then display boxes
+        // Boxes - clickable headings that open full width content - (h2 boxes and has content and h2 is not empty OR boxcontent is not equal to 'empty' then display boxes)
         else if (h2 !== "" || boxcontent !== "empty") {
             boxHTML = `<li class='box illuminate focusable ${item.item.colour} inactive  ${randomTransition}' id='box-${item.id}' tabindex='${item.id}'>
                             <div class='icon-clr'>
