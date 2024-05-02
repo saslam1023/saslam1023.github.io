@@ -98,7 +98,8 @@ function createBoxHTML(item) {
             boxHTML = `<li class='box illuminate focusable ${item.item.colour} inactive ${randomTransition}' id='box-${item.id}' tabindex='${item.id}'>
                                     <a href='${item.boxlink}' target='_blank'><div class='icon-clr'>
                                         ${item.icon}</div>
-                                    <h2 class='clickable searchable'><a href='${item.boxlink}' target='_blank'>${h2}</a></h2>
+                                        <a href='${item.boxlink}' target='_blank'>
+                                    <h2 class='clickable searchable'>${h2}</h2></a>
                                     ${boxcontent}
                                     <span class='exit material-symbols-rounded md-16 whitet'>close</span></a>
                                 </li>`;
