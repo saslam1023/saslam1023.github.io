@@ -7,20 +7,23 @@ document.querySelector('#contactForm').addEventListener('submit', function (even
         method: 'POST',
         body: formData,
     })
-        .then(response => response.json())
+ .then(response => response.json()) // Parse JSON response
         .then(data => {
             const messagesDiv = document.querySelector('.messages');
             if (data.success) {
-                messagesDiv.innerText = data.message; // Display success message
+                // Display success message
+                messagesDiv.innerText = data.message;
                 messagesDiv.style.color = 'green';
             } else {
-                messagesDiv.innerText = data.message; // Display error message
+                // Display error message
+                messagesDiv.innerText = data.message;
                 messagesDiv.style.color = 'red';
             }
         })
         .catch(error => {
-            document.querySelector('.messages').innerText =
-                'Something went wrong. Please try again.';
-            document.querySelector('.messages').style.color = 'red';
+            // Handle network or fetch errors
+            const messagesDiv = document.querySelector('.messages');
+            messagesDiv.innerText = 'Oops! Something went wrong. Please try again.';
+            messagesDiv.style.color = 'red';
         });
 });
