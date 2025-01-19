@@ -1,4 +1,4 @@
-document.querySelector('#contactForm').addEventListener('submit', function (event) {
+document.getElementById('contactForm').addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent the form from reloading the page
 
     const formData = new FormData(this);
