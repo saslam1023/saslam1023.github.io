@@ -1,29 +1,33 @@
-document.getElementById('contactForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent the form from reloading the page
+// Get form element
+const form = document.getElementById('contactForm');
 
-    const formData = new FormData(this);
+// Add event listener to the form submission
+form.addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent default form submission
 
+    // Get form data
+    const formData = new FormData(form);
+
+    // Send the form data using fetch
     fetch('https://slammin-design.co.uk/connect.php', {
         method: 'POST',
-        body: formData,
+        body: formData
     })
- .then(response => response.json()) // Parse JSON response
-        .then(data => {
-            const messagesDiv = document.querySelector('.messages');
-            if (data.success) {
-                // Display success message
-                messagesDiv.innerText = data.message;
-                messagesDiv.style.color = 'green';
-            } else {
-                // Display error message
-                messagesDiv.innerText = data.message;
-                messagesDiv.style.color = 'red';
-            }
-        })
-        .catch(error => {
-            // Handle network or fetch errors
-            const messagesDiv = document.querySelector('.messages');
-            messagesDiv.innerText = 'Oops! Something went wrong. Please try again.';
-            messagesDiv.style.color = 'red';
-        });
+    .then(response => response.json())  // Parse JSON response
+    .then(data => {
+        // Update the .messages element with the response message
+        const messagesElement = document.querySelector('.messages');
+        if (data.success) {
+            // If successful, display the success message
+            messagesElement.innerText = data.message;
+        } else {
+            // If there's an error, display the error message
+            messagesElement.innerText = data.message;
+        }
+    })
+    .catch(error => {
+        // Handle any errors from the fetch request
+        const messagesElement = document.querySelector('.messages');
+        messagesElement.innerText = "Something went wrong. Please try again.";
+    });
 });
