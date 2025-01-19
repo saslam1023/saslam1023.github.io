@@ -1,12 +1,13 @@
-// Get form element
-const form = document.getElementById('contactForm');
+document.addEventListener("DOMContentLoaded", function() {
+    // Event delegation: Attach the event listener to the document (or another static parent element)
+    document.addEventListener('submit', function (event) {
+        // Check if the target of the event is the form
+        if (event.target && event.target.id === 'contactForm') {
+            event.preventDefault(); // Prevent default form submission
 
-// Add event listener to the form submission
-form.addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent default form submission
+            const form = event.target; // The form that was submitted
+            const formData = new FormData(form); // Get the form data
 
-    // Get form data
-    const formData = new FormData(form);
 
     // Send the form data using fetch
     fetch('https://slammin-design.co.uk/connect.php', {
@@ -29,5 +30,7 @@ form.addEventListener('submit', function (event) {
         // Handle any errors from the fetch request
         const messagesElement = document.querySelector('.messages');
         messagesElement.innerText = "Something went wrong. Please try again.";
+    });
+    }
     });
 });
