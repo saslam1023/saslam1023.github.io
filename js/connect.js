@@ -1,22 +1,26 @@
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent form from refreshing the page
+document.querySelector('#contactForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the form from reloading the page
 
-        const formData = new FormData(this);
-        fetch('https://slammin-design.co.uk/connect.php', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.text())
+    const formData = new FormData(this);
+
+    fetch('https://slammin-design.co.uk/connect.php', {
+        method: 'POST',
+        body: formData,
+    })
+        .then(response => response.json())
         .then(data => {
-            document.querySelector('.messages').innerText = "Thank you for your message!";
+            const messagesDiv = document.querySelector('.messages');
+            if (data.success) {
+                messagesDiv.innerText = data.message; // Display success message
+                messagesDiv.style.color = 'green';
+            } else {
+                messagesDiv.innerText = data.message; // Display error message
+                messagesDiv.style.color = 'red';
+            }
         })
         .catch(error => {
-            document.querySelector('.messages').innerText = "Oops! Something went wrong. Please try again.";
+            document.querySelector('.messages').innerText =
+                'Something went wrong. Please try again.';
+            document.querySelector('.messages').style.color = 'red';
         });
-    });
-
-
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.has('success')) {
-        document.querySelector('.messages').innerText = "Thank you for your message!";
-    }
+});
