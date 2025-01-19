@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function() {
             const form = event.target; // The form that was submitted
             const formData = new FormData(form); // Get the form data
 
-
     // Send the form data using fetch
     fetch('https://slammin-design.co.uk/connect.php', {
         method: 'POST',
@@ -20,10 +19,13 @@ document.addEventListener("DOMContentLoaded", function() {
         const messagesElement = document.querySelector('.messages');
         if (data.success) {
             // If successful, display the success message
-            messagesElement.innerText = data.message;
+            messagesElement.innerText = "Your message has been sent. Will be in touch shortly.";
+
+            // Reset the form fields
+            form.reset();  // Clear the form fields
         } else {
             // If there's an error, display the error message
-            messagesElement.innerText = data.message;
+            messagesElement.innerText = "Something went wrong.  Try again later.";
         }
     })
     .catch(error => {
@@ -31,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const messagesElement = document.querySelector('.messages');
         messagesElement.innerText = "Something went wrong. Please try again.";
     });
+
     }
     });
 });
