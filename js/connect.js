@@ -9,30 +9,31 @@ document.addEventListener("DOMContentLoaded", function() {
             const formData = new FormData(form); // Get the form data
 
     // Send the form data using fetch
-    fetch('https://slammin-design.co.uk/connect.php', {
+   /* fetch('https://slammin-design.co.uk/connect.php', {
         method: 'POST',
         body: formData
+    })*/
+    fetch('https://formspree.io/f/xeepqdrl', {
+        method: 'POST',
+        body: formData,
+        headers: {
+        'Accept': 'application/json'
+    }
     })
-    .then(response => response.json())  // Parse JSON response
-    .then(data => {
-        // Update the .messages element with the response message
-        const messagesElement = document.querySelector('.messages');
-        if (data.success) {
-            // If successful, display the success message
-            messagesElement.innerText = "Your message has been sent. Will be in touch shortly.";
+    .then(response => {
+    const messagesElement = document.querySelector('.messages');
 
-            // Reset the form fields
-            form.reset();  // Clear the form fields
-        } else {
-            // If there's an error, display the error message
-            messagesElement.innerText = "Something went wrong.  Try again later.";
-        }
-    })
-    .catch(error => {
-        // Handle any errors from the fetch request
-        const messagesElement = document.querySelector('.messages');
-        messagesElement.innerText = "Something went wrong. Please try again.";
-    });
+    if (response.ok) {
+        messagesElement.innerText = "Your message has been sent. Will be in touch shortly.";
+        form.reset();
+    } else {
+        messagesElement.innerText = "Something went wrong. Try again later.";
+    }
+})
+.catch(error => {
+    const messagesElement = document.querySelector('.messages');
+    messagesElement.innerText = "Something went wrong. Please try again.";
+});
 
     }
     });
